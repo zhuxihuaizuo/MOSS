@@ -1,0 +1,21 @@
+# search
+duckduckgo-search
+google-api-python-client
+
+# web service
+beautifulsoup4
+requests
+selenium
+
+# math
+numpy
+
+# data or message
+orjson
+tiktoken
+
+# ai
+openai
+
+# output
+colorama
