@@ -5,9 +5,10 @@
 # @Software: PyCharm 
 # @Comment :
 from jarvis.memory.local import LocalMemory
+from jarvis import settings
 
 
-def get_memory(init=False):
+def get_memory(backend=settings.MEMORY_BACKEND, init=False):
     memory = None
     # if cfg.memory_backend == "pinecone":
     #     if not PineconeMemory:

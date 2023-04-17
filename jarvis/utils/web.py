@@ -11,16 +11,19 @@ import requests
 from requests import Response
 from bs4 import BeautifulSoup
 
-
 from jarvis.memory import get_memory
 from .html import extract_hyperlinks, format_hyperlinks
 import jarvis.settings as settings
-
 
 memory = get_memory()
 
 session = requests.Session()
 session.headers.update({"User-Agent": settings.USER_AGENT})
+if settings.PROXY_WEB_SESSION:
+    session.proxies = {
+        'http': settings.PROXY_HTTP,
+        'https': settings.PROXY_HTTPS
+    }
 
 
 def is_valid_url(url: str) -> bool:
@@ -70,7 +73,7 @@ def check_local_file_access(url: str) -> bool:
 
 
 def get_response(
-    url: str, timeout: int = 10
+        url: str, timeout: int = 10
 ) -> Union[Tuple[None, str], Tuple[Response, None]]:
     """Get the response from a URL
 
@@ -163,13 +166,3 @@ def scrape_links(url: str) -> Union[str, List[str]]:
     hyperlinks = extract_hyperlinks(soup, url)
 
     return format_hyperlinks(hyperlinks)
-
-
-def create_message(chunk, question):
-    """Create a message for the user to summarize a chunk of text"""
-    return {
-        "role": "user",
-        "content": f'"""{chunk}""" Using the above text, answer the following'
-        f' question: "{question}" -- if the question cannot be answered using the'
-        " text, summarize the text.",
-    }

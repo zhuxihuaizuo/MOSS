@@ -16,6 +16,8 @@ tiktoken
 
 # ai
 openai
+paddlepaddle-gpu
+paddlenlp
 
 # output
 colorama
