@@ -5,46 +5,52 @@
 # @Software: PyCharm 
 # @Comment : 仅用于提供网页AI搜索的agent
 import json
+import time
 
 import jarvis.settings as settings
-from jarvis.chat import chat_with_ai
+from jarvis.agent.agent import Agent
+from jarvis.llm import ChatGPT
+from jarvis.memory import get_memory, Memory
 from jarvis.search import search
-from jarvis.utils.web import scrape_text
-from jarvis.memory.memory import Memory
 
 
-class SearchAgent:
+class SearchAgent(Agent):
     """
     仅用于搜索提供AI搜索的agent
     """
 
-    def __init__(self,
-                 ai_name,
-                 memory: Memory):
-        self.ai_name = ai_name
-        self.memory = memory
-        self.history = []
-        self.prompt = 'You are a search engine.'
+    def __init__(self, ai_name: str = 'Jarvis', memory: Memory = get_memory()):
+        super().__init__(ai_name, memory, [], '你是一个AI助手')
+        self.assistant = ChatGPT(self.prompt, history=[])
+        self.search_result = ''
 
-    def search(self, query: str, num_results: int = settings.NUMBER_RESULTS):
+    def search(self, query: str,
+               num_results: int = settings.NUMBER_RESULTS,
+               current_time=time.strftime('%c'),
+               position='') -> str:
         results = search(query, num_results)
         results = json.loads(results)
+        self.search_result = ''
         for result in results:
-            text = scrape_text(result['href'])  # TODO 适应不同的搜索引擎
-            memory_to_add = (
-                f"query: {result['href']} "
-                f"\nResult: {text} "
-            )
-            self.memory.add(memory_to_add)
+            text = result['body']
+            self.search_result += text
 
-        assistant_reply = chat_with_ai(
-            self.prompt,
-            query,
-            self.history,
-            self.memory,
-            settings.FAST_TOKEN_LIMIT,
+        assistant_reply = self.assistant.create_chat_completion(
+            query=query,
+            position=position,
+            current_time=current_time,
+            temperature=1,
+            stream=False,
+            max_tokens=1000,
+            query_decorator=self.query_decorator
         )
+
         return assistant_reply
 
-    def clear_history(self):
-        self.history.clear()
+    def query_decorator(self, query: str) -> str:
+        return f"""Web search result:
+{self.search_result}
+Instructions: Using the knowledge you have learned and the provided web search results, write a comprehensive reply to the given query.
+If the provided search results refer to multiple subjects with the same name, write separate answers for each subject.
+If the web search result is insufficient, using the knowledge you have learned write a reply to the given query.
+Query: {query}"""

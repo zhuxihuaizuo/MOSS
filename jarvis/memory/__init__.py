@@ -4,11 +4,12 @@
 # @File    : __init__.py.py
 # @Software: PyCharm 
 # @Comment :
+from jarvis.memory.memory import Memory
 from jarvis.memory.local import LocalMemory
 from jarvis import settings
 
 
-def get_memory(backend=settings.MEMORY_BACKEND, init=False):
+def get_memory(backend=settings.MEMORY_BACKEND, init=False) -> Memory:
     memory = None
     # if cfg.memory_backend == "pinecone":
     #     if not PineconeMemory:
@@ -39,6 +40,7 @@ def get_memory(backend=settings.MEMORY_BACKEND, init=False):
 
 
 __all__ = [
+    "Memory",
     "get_memory",
     "LocalMemory",
     # "RedisMemory",

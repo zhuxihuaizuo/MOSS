@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/4/17 下午10:39
+# @Time    : 2023/4/19 下午3:42
 # @Author  : Su Yang
-# @File    : agent_manager.py
+# @File    : ChatGLM.py
 # @Software: PyCharm 
 # @Comment :
-
-
-
-

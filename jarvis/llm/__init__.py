@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/4/16 下午6:48
+# @Time    : 2023/4/19 上午11:42
 # @Author  : Su Yang
 # @File    : __init__.py.py
 # @Software: PyCharm 
 # @Comment :
-from .search_agent import SearchAgent
+from .assistant import Assistant
+from .openai import ChatGPT

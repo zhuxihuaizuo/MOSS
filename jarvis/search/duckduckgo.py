@@ -29,11 +29,11 @@ def search(query: str, num_results: int = 8) -> str:
     if not query:
         return json.dumps(search_results)
 
-    results = ddg(query, max_results=num_results)
+    results = ddg(query, region=settings.LANGUAGE, max_results=num_results)
     if not results:
         return json.dumps(search_results)
 
     for j in results:
         search_results.append(j)
-
+    # return format [{'title': '', 'href': href, 'body': body}, ...]
     return json.dumps(search_results, ensure_ascii=False, indent=4)

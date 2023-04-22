@@ -5,12 +5,14 @@
 # @Software: PyCharm 
 # @Comment :
 
-from search.duckduckgo import search
+from agent.search_agent import SearchAgent
 
 
-def main():
-    print(search("什么是chatGPT"))
+def search_service():
+    search_agent = SearchAgent()
+    relpy = search_agent.search('流浪地球2')
+    print(relpy)
 
 
 if __name__ == "__main__":
-    main()
+    search_service()

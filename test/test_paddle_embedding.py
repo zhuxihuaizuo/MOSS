@@ -4,12 +4,13 @@
 # @File    : test_paddle_embedding.py
 # @Software: PyCharm 
 # @Comment :
-import paddle
-from paddlenlp.embeddings import TokenEmbedding, list_embedding_name
+from jarvis.utils.embedding import create_embedding_peddle
 
-# paddle.device.set_device('cpu')
-print(paddle.device.get_device())
+print(create_embedding_peddle('飞桨是优秀的深度学习平台'))
+print(create_embedding_peddle('飞桨是优秀的深度学习平台1'))
+print(create_embedding_peddle('飞桨是优秀的深度学习平台2'))
+print(create_embedding_peddle('飞桨是优秀的深度学习平台3'))
+print(create_embedding_peddle('飞桨是优秀的深度学习平台4'))
+print(create_embedding_peddle('飞桨是优秀的深度学习平台5'))
+print(create_embedding_peddle('飞桨是优秀的深度学习平台6'))
 
-token_embedding = TokenEmbedding(embedding_name="w2v.baidu_encyclopedia.target.word-word.dim300", trainable=False)
-score = token_embedding.cosine_sim("你好", "再见")
-print(score)

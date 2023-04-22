@@ -12,10 +12,10 @@ import numpy as np
 import orjson
 
 from jarvis.memory.memory import Memory
-from jarvis.utils.llm import create_embedding_with_ada
+from jarvis.utils.embedding import create_embedding
 import jarvis.settings as settings
 
-EMBED_DIM = 1536
+EMBED_DIM = settings.EMBEDDING_DIM
 SAVE_OPTIONS = orjson.OPT_SERIALIZE_NUMPY | orjson.OPT_SERIALIZE_DATACLASS
 
 
@@ -78,7 +78,7 @@ class LocalMemory(Memory):
             return ""
         self.data.texts.append(text)
 
-        embedding = create_embedding_with_ada(text)
+        embedding = create_embedding(text)
 
         vector = np.array(embedding).astype(np.float32)
         vector = vector[np.newaxis, :]
@@ -126,7 +126,7 @@ class LocalMemory(Memory):
 
         Returns: List[str]
         """
-        embedding = create_embedding_with_ada(data)
+        embedding = create_embedding(data)
 
         scores = np.dot(self.data.embeddings, embedding)
 

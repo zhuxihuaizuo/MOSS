@@ -5,6 +5,7 @@
 # @Software: PyCharm 
 # @Comment :
 from jarvis import settings
+from .semantic import semantic_search_cn
 
 
 def search(query: str, num_results: int = 8) -> str:
