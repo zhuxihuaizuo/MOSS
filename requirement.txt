@@ -1,23 +1,28 @@
 # search
 duckduckgo-search
-google-api-python-client
 
 # web service
 beautifulsoup4
-requests
-selenium
+fastapi
+uvicorn
 
 # math
 numpy
 
-# data or message
-orjson
-tiktoken
-
 # ai
 openai
-paddlepaddle-gpu
-paddlenlp
+langchain
+torch
+transformers
+sentence-transformers
+faiss-cpu
+tiktoken
+
+
 
 # output
 colorama
+
+# setings
+python-dotenv
+

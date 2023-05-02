@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cf2755c-0c9b-40d1-b1f2-cfd57af64d55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MOSS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4e0ff1cf-9e28-4633-a785-7835f883cd97.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/callbacks/stream_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/llms/chatglm_6b.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/master/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/master/travel_master.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/tools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/tools/duckduckgo_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/tools/sight_serach.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/utils/embedding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moss/utils/proxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/moss/callbacks/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/agent/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/agent/agent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/agent/agent_manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/agent/search_agent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/moss/llms/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/llm/ChatGLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/moss/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/llm/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/llm/assistant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/llm/openai.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/llm/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/logs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/memory/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/memory/local.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/memory/memory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/moss/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/search/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/search/duckduckgo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/search/google.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/search/semantic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/singleton.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/speech/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/moss/chain/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/utils/embedding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/utils/html.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/utils/text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/utils/token.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jarvis/utils/web.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_duckduckgo_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_openai_api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_paddle_embedding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_text_sematic_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_token_counter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_web_search.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OsCsnf4eDRxOCcQY4woHJJV52e" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/suyang/projects/python/MOSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/moss" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MOSS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/moss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/moss/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MOSS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/moss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/moss/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cf2755c-0c9b-40d1-b1f2-cfd57af64d55" name="Changes" comment="" />
+      <created>1682340115581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682340115581</updated>
+      <workItem from="1682340117058" duration="1063000" />
+      <workItem from="1682382090343" duration="3486000" />
+      <workItem from="1682392897993" duration="4758000" />
+      <workItem from="1682402625653" duration="4088000" />
+      <workItem from="1682411883779" duration="11560000" />
+      <workItem from="1682428368847" duration="759000" />
+      <workItem from="1682431031236" duration="526000" />
+      <workItem from="1682491074718" duration="198000" />
+      <workItem from="1682493236460" duration="1097000" />
+      <workItem from="1682500138102" duration="12448000" />
+      <workItem from="1682547966157" duration="435000" />
+      <workItem from="1682572374748" duration="17325000" />
+      <workItem from="1682648897597" duration="403000" />
+      <workItem from="1682754839217" duration="2060000" />
+      <workItem from="1682756919123" duration="9945000" />
+      <workItem from="1682827378594" duration="1645000" />
+      <workItem from="1682829035992" duration="5707000" />
+      <workItem from="1682835660397" duration="7197000" />
+      <workItem from="1682999624257" duration="10505000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.template" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/llms/openai.py</url>
+          <line>308</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/moss/utils/embedding.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MOSS$class_validators.coverage" NAME="class_validators Coverage Results" MODIFIED="1682414578709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/pydantic" />
+    <SUITE FILE_PATH="coverage/MOSS$huggingface.coverage" NAME="huggingface Coverage Results" MODIFIED="1682428219837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/embeddings" />
+    <SUITE FILE_PATH="coverage/MOSS$openai.coverage" NAME="openai Coverage Results" MODIFIED="1682768665735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/chat_models" />
+    <SUITE FILE_PATH="coverage/MOSS$test_langchain.coverage" NAME="test_langchain Coverage Results" MODIFIED="1682406722769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$test_env.coverage" NAME="test_env Coverage Results" MODIFIED="1682394353713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$base.coverage" NAME="base Coverage Results" MODIFIED="1682514955510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/chains/qa_with_sources" />
+    <SUITE FILE_PATH="coverage/MOSS$test_langchain_tools.coverage" NAME="test_langchain_tools Coverage Results" MODIFIED="1682502529654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$test_flask_stream.coverage" NAME="test_flask_stream Coverage Results" MODIFIED="1682769621924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$test_langchain_embedding.coverage" NAME="test_langchain_embedding Coverage Results" MODIFIED="1682505015107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$llm.coverage" NAME="llm Coverage Results" MODIFIED="1682578942015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/chains" />
+    <SUITE FILE_PATH="coverage/MOSS$Doctests_in_adapters.coverage" NAME="Doctests in adapters Coverage Results" MODIFIED="1682578767373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/requests" />
+    <SUITE FILE_PATH="coverage/MOSS$main.coverage" NAME="main Coverage Results" MODIFIED="1683001043821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/moss" />
+    <SUITE FILE_PATH="coverage/MOSS$retrieval.coverage" NAME="retrieval Coverage Results" MODIFIED="1682575505845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/chains/qa_with_sources" />
+    <SUITE FILE_PATH="coverage/MOSS$stuff.coverage" NAME="stuff Coverage Results" MODIFIED="1682578742419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/chains/combine_documents" />
+    <SUITE FILE_PATH="coverage/MOSS$test_streamlit.coverage" NAME="test_streamlit Coverage Results" MODIFIED="1682760235993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$test_langchain_stream.coverage" NAME="test_langchain_stream Coverage Results" MODIFIED="1682491089482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$app.coverage" NAME="app Coverage Results" MODIFIED="1683015054528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/moss" />
+    <SUITE FILE_PATH="coverage/MOSS$streaming_aiter.coverage" NAME="streaming_aiter Coverage Results" MODIFIED="1682838063621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.10/site-packages/langchain/callbacks" />
+    <SUITE FILE_PATH="coverage/MOSS$test_vectordb.coverage" NAME="test_vectordb Coverage Results" MODIFIED="1682829811477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$test_file_loader.coverage" NAME="test_file_loader Coverage Results" MODIFIED="1682504507683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/MOSS$test_async_stream.coverage" NAME="test_async_stream Coverage Results" MODIFIED="1682837173801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+  </component>
+</project>
