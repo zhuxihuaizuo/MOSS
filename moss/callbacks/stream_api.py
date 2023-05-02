@@ -31,21 +31,25 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
     def __init__(self) -> None:
         self.queue = asyncio.Queue()
         self.done = asyncio.Event()
+        self.agent_done = asyncio.Event()
 
     async def on_llm_start(
             self, serialized: Dict[str, Any], prompts: List[str], **kwargs: Any
     ) -> None:
         # If two calls are made in a row, this resets the state
         self.done.clear()
+        self.agent_done.clear()
+        self.queue.put_nowait(',')
 
     async def on_llm_new_token(self, token: str, **kwargs: Any) -> None:
         self.queue.put_nowait(token)
 
     async def on_llm_end(self, response: LLMResult, **kwargs: Any) -> None:
+        self.done.set()
         try:
             response = json.loads(response.generations[0][0].text)
             if response.get('action') == 'Final Answer':
-                self.done.set()
+                self.agent_done.set()
         except Exception as e:
             print(e)
 
@@ -57,7 +61,7 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
     # TODO implement the other methods
 
     async def aiter(self) -> AsyncIterator[str]:
-        while not self.queue.empty() or not self.done.is_set():
+        while not self.queue.empty() or not self.agent_done.is_set():
             # Wait for the next token in the queue,
             # but stop waiting if the done event is set
             done, other = await asyncio.wait(
@@ -65,7 +69,7 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
                     # NOTE: If you add other tasks here, update the code below,
                     # which assumes each set has exactly one task each
                     asyncio.ensure_future(self.queue.get()),
-                    asyncio.ensure_future(self.done.wait()),
+                    asyncio.ensure_future(self.agent_done.wait()),
                 ],
                 return_when=asyncio.FIRST_COMPLETED,
             )
