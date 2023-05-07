@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 from typing import Any, AsyncIterator, Dict, List, Literal, Union, cast
 
 from langchain.callbacks.base import AsyncCallbackHandler
@@ -24,6 +25,15 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
 
     done: asyncio.Event
 
+    json_str = ''
+
+    pattern = re.compile(r'\{\s*?"action":\s*"(.+?)",\s*"action_input":\s*"')
+
+    state = 0
+
+    action = ''
+    action_input = ''
+
     @property
     def always_verbose(self) -> bool:
         return True
@@ -39,10 +49,39 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
         # If two calls are made in a row, this resets the state
         self.done.clear()
         self.agent_done.clear()
-        self.queue.put_nowait(',')
+        self.state = 0
+        self.json_str = ''
+        self.action = ''
+        self.action_input = ''
 
     async def on_llm_new_token(self, token: str, **kwargs: Any) -> None:
-        self.queue.put_nowait(token)
+        # self.queue.put_nowait(token)
+        if self.state == 0:
+            # 等待action的类型
+            self.json_str += token
+            search = self.pattern.search(self.json_str)
+            if search:
+                self.action = search.group(1)
+                if self.action == 'Final Answer':
+                    self.state = 1
+                else:
+                    self.state = 2
+        elif self.state == 1:
+            # Final Answer
+            if '"' in token:
+                self.state = 3
+            else:
+                self.queue.put_nowait('{"action": "Final Answer", "action_input": "' + token + '"}')
+        elif self.state == 2:
+            # other action input
+            if '"' in token:
+                self.state = 3
+            else:
+                self.action_input += token
+        elif self.state == 3:
+            if self.action != 'Final Answer':
+                self.queue.put_nowait('{ "action": "' + self.action + '", "action": "' + self.action_input + '"}')
+            self.state = -1
 
     async def on_llm_end(self, response: LLMResult, **kwargs: Any) -> None:
         self.done.set()
@@ -57,6 +96,7 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
             self, error: Union[Exception, KeyboardInterrupt], **kwargs: Any
     ) -> None:
         self.done.set()
+        self.agent_done.set()
 
     # TODO implement the other methods
 

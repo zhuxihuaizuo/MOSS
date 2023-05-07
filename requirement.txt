@@ -19,10 +19,11 @@ faiss-cpu
 tiktoken
 
 
-
 # output
 colorama
 
 # setings
 python-dotenv
 
+# api
+pca

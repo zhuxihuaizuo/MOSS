@@ -13,6 +13,7 @@ from master.travel_master import TravelMaster
 from utils.proxy import *
 
 set_duckduckgo_proxy()
+set_openai_proxy()
 
 travel_master = TravelMaster()
 
@@ -27,8 +28,9 @@ async def call(query):
 
 
 async def main():
-    await asyncio.gather(travel_master.arun('你好'), output())
+    await asyncio.gather(travel_master.arun("搜索我附近的酒店"), output())
 
 
 if __name__ == "__main__":
+    # travel_master.set_time_and_address()
     asyncio.run(main())

@@ -20,9 +20,9 @@ def get_embeddings(model: str = 'openai') -> Embeddings:
     """
     if model == "text2vec":
         print('load model text2vec-large-chinese')
-        embedding_device = "cuda" if torch.cuda.is_available() else "cpu"
+        # embedding_device = "cuda" if torch.cuda.is_available() else "cpu"
         embeddings = HuggingFaceEmbeddings(model_name='GanymedeNil/text2vec-large-chinese',
-                                           model_kwargs={'device': embedding_device})
+                                           model_kwargs={'device': 'cpu'})
     elif model == 'openai':
         print('load model text-embedding-ada-002')
         embeddings = OpenAIEmbeddings()

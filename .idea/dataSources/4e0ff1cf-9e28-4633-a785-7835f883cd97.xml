@@ -1423,2528 +1423,2755 @@
     <argument id="503" parent="172">
       <Position>1</Position>
     </argument>
-    <table id="504" parent="173" name="sqlite_master">
+    <table id="504" parent="173" name="auth_group"/>
+    <table id="505" parent="173" name="auth_group_permissions"/>
+    <table id="506" parent="173" name="auth_permission"/>
+    <table id="507" parent="173" name="auth_user"/>
+    <table id="508" parent="173" name="auth_user_groups"/>
+    <table id="509" parent="173" name="auth_user_user_permissions"/>
+    <table id="510" parent="173" name="django_admin_log"/>
+    <table id="511" parent="173" name="django_content_type"/>
+    <table id="512" parent="173" name="django_migrations"/>
+    <table id="513" parent="173" name="django_session"/>
+    <table id="514" parent="173" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="505" parent="173" name="sqlite_sequence">
+    <table id="515" parent="173" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="506" parent="173" name="utility_address"/>
-    <table id="507" parent="173" name="utility_advertisement"/>
-    <table id="508" parent="173" name="utility_appuser"/>
-    <table id="509" parent="173" name="utility_appuser_collection"/>
-    <table id="510" parent="173" name="utility_appuser_collections_sight"/>
-    <table id="511" parent="173" name="utility_appuser_received_messages"/>
-    <table id="512" parent="173" name="utility_appuser_subscription"/>
-    <table id="513" parent="173" name="utility_appuser_unread_messages"/>
-    <table id="514" parent="173" name="utility_city"/>
-    <table id="515" parent="173" name="utility_comment"/>
-    <table id="516" parent="173" name="utility_comment_likes"/>
-    <table id="517" parent="173" name="utility_companion"/>
-    <table id="518" parent="173" name="utility_companion_cancelled_users"/>
-    <table id="519" parent="173" name="utility_companion_fellows"/>
-    <table id="520" parent="173" name="utility_companion_tag"/>
-    <table id="521" parent="173" name="utility_feedback"/>
-    <table id="522" parent="173" name="utility_flight"/>
-    <table id="523" parent="173" name="utility_food"/>
-    <table id="524" parent="173" name="utility_food_images"/>
-    <table id="525" parent="173" name="utility_hotel"/>
-    <table id="526" parent="173" name="utility_image"/>
-    <table id="527" parent="173" name="utility_innersight"/>
-    <table id="528" parent="173" name="utility_log"/>
-    <table id="529" parent="173" name="utility_message"/>
-    <table id="530" parent="173" name="utility_plan"/>
-    <table id="531" parent="173" name="utility_plan_sights"/>
-    <table id="532" parent="173" name="utility_port"/>
-    <table id="533" parent="173" name="utility_position"/>
-    <table id="534" parent="173" name="utility_position_images"/>
-    <table id="535" parent="173" name="utility_price"/>
-    <table id="536" parent="173" name="utility_province"/>
-    <table id="537" parent="173" name="utility_readrecord"/>
-    <table id="538" parent="173" name="utility_schedule"/>
-    <table id="539" parent="173" name="utility_scheduleitem"/>
-    <table id="540" parent="173" name="utility_shieldedword"/>
-    <table id="541" parent="173" name="utility_sight"/>
-    <table id="542" parent="173" name="utility_sight_images"/>
-    <table id="543" parent="173" name="utility_sight_tags"/>
-    <table id="544" parent="173" name="utility_sight_types"/>
-    <table id="545" parent="173" name="utility_sighttype"/>
-    <table id="546" parent="173" name="utility_tag"/>
-    <table id="547" parent="173" name="utility_travelnotes"/>
-    <table id="548" parent="173" name="utility_travelnotes_images"/>
-    <table id="549" parent="173" name="utility_travelnotes_likes"/>
-    <table id="550" parent="173" name="utility_travelnotes_tag"/>
-    <table id="551" parent="173" name="utility_travelnotescollection"/>
-    <table id="552" parent="173" name="utility_usersflight"/>
-    <column id="553" parent="504" name="type">
-      <DasType>TEXT|0s</DasType>
-      <Position>1</Position>
-    </column>
-    <column id="554" parent="504" name="name">
-      <DasType>TEXT|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="555" parent="504" name="tbl_name">
-      <DasType>TEXT|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="556" parent="504" name="rootpage">
-      <DasType>INT|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="557" parent="504" name="sql">
-      <DasType>TEXT|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="558" parent="505" name="name">
-      <Position>1</Position>
-    </column>
-    <column id="559" parent="505" name="seq">
-      <Position>2</Position>
-    </column>
-    <column id="560" parent="506" name="id">
+    <table id="516" parent="173" name="utility_address"/>
+    <table id="517" parent="173" name="utility_advertisement"/>
+    <table id="518" parent="173" name="utility_appuser"/>
+    <table id="519" parent="173" name="utility_appuser_collection"/>
+    <table id="520" parent="173" name="utility_appuser_collections_sight"/>
+    <table id="521" parent="173" name="utility_appuser_subscription"/>
+    <table id="522" parent="173" name="utility_city"/>
+    <table id="523" parent="173" name="utility_comment"/>
+    <table id="524" parent="173" name="utility_comment_likes"/>
+    <table id="525" parent="173" name="utility_companion"/>
+    <table id="526" parent="173" name="utility_companion_cancelled_users"/>
+    <table id="527" parent="173" name="utility_companion_fellows"/>
+    <table id="528" parent="173" name="utility_companion_tag"/>
+    <table id="529" parent="173" name="utility_feedback"/>
+    <table id="530" parent="173" name="utility_flight"/>
+    <table id="531" parent="173" name="utility_food"/>
+    <table id="532" parent="173" name="utility_food_images"/>
+    <table id="533" parent="173" name="utility_hotel"/>
+    <table id="534" parent="173" name="utility_image"/>
+    <table id="535" parent="173" name="utility_innersight"/>
+    <table id="536" parent="173" name="utility_log"/>
+    <table id="537" parent="173" name="utility_plan"/>
+    <table id="538" parent="173" name="utility_plan_sights"/>
+    <table id="539" parent="173" name="utility_port"/>
+    <table id="540" parent="173" name="utility_position"/>
+    <table id="541" parent="173" name="utility_position_images"/>
+    <table id="542" parent="173" name="utility_price"/>
+    <table id="543" parent="173" name="utility_province"/>
+    <table id="544" parent="173" name="utility_readrecord"/>
+    <table id="545" parent="173" name="utility_schedule"/>
+    <table id="546" parent="173" name="utility_scheduleitem"/>
+    <table id="547" parent="173" name="utility_shieldedword"/>
+    <table id="548" parent="173" name="utility_sight"/>
+    <table id="549" parent="173" name="utility_sight_images"/>
+    <table id="550" parent="173" name="utility_sight_tags"/>
+    <table id="551" parent="173" name="utility_sight_types"/>
+    <table id="552" parent="173" name="utility_sighttype"/>
+    <table id="553" parent="173" name="utility_tag"/>
+    <table id="554" parent="173" name="utility_travelnotes"/>
+    <table id="555" parent="173" name="utility_travelnotes_images"/>
+    <table id="556" parent="173" name="utility_travelnotes_likes"/>
+    <table id="557" parent="173" name="utility_travelnotes_tag"/>
+    <table id="558" parent="173" name="utility_travelnotescollection"/>
+    <table id="559" parent="173" name="utility_usersflight"/>
+    <column id="560" parent="504" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="561" parent="506" name="name">
-      <DasType>varchar(32)|0s</DasType>
+    <column id="561" parent="504" name="name">
+      <DasType>varchar(150)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="562" parent="506" name="longitude">
-      <DasType>real|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="563" parent="506" name="latitude">
-      <DasType>real|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="564" parent="506" name="nation">
-      <DasType>varchar(32)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="565" parent="506" name="province">
-      <DasType>varchar(32)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <column id="566" parent="506" name="city">
-      <DasType>varchar(32)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <column id="567" parent="506" name="district">
-      <DasType>varchar(32)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-    </column>
-    <column id="568" parent="506" name="street">
-      <DasType>varchar(32)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-    </column>
-    <column id="569" parent="506" name="street_number">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-    </column>
-    <column id="570" parent="506" name="city_position_id">
-      <DasType>varchar(6)|0s</DasType>
-      <Position>11</Position>
-    </column>
-    <column id="571" parent="506" name="position_id">
-      <DasType>varchar(6)|0s</DasType>
-      <Position>12</Position>
-    </column>
-    <column id="572" parent="506" name="province_position_id">
-      <DasType>varchar(6)|0s</DasType>
-      <Position>13</Position>
-    </column>
-    <foreign-key id="573" parent="506">
-      <ColNames>city_position_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_position</RefTableName>
-    </foreign-key>
-    <foreign-key id="574" parent="506">
-      <ColNames>position_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_position</RefTableName>
-    </foreign-key>
-    <foreign-key id="575" parent="506">
-      <ColNames>province_position_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_position</RefTableName>
-    </foreign-key>
-    <index id="576" parent="506" name="utility_address_city_position_id_0e9a3c9f">
-      <ColNames>city_position_id</ColNames>
+    <index id="562" parent="504" name="sqlite_autoindex_auth_group_1">
+      <ColNames>name</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
     </index>
-    <index id="577" parent="506" name="utility_address_position_id_07daaf4c">
-      <ColNames>position_id</ColNames>
-    </index>
-    <index id="578" parent="506" name="utility_address_province_position_id_a6a56f6e">
-      <ColNames>province_position_id</ColNames>
-    </index>
-    <key id="579" parent="506">
+    <key id="563" parent="504">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <check id="580" parent="507">
-      <Predicate>&quot;read&quot; &gt;= 0</Predicate>
-    </check>
-    <column id="581" parent="507" name="id">
+    <key id="564" parent="504">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_auth_group_1</UnderlyingIndexName>
+    </key>
+    <column id="565" parent="505" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="582" parent="507" name="time">
+    <column id="566" parent="505" name="group_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="567" parent="505" name="permission_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="568" parent="505">
+      <ColNames>group_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_group</RefTableName>
+    </foreign-key>
+    <foreign-key id="569" parent="505">
+      <ColNames>permission_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_permission</RefTableName>
+    </foreign-key>
+    <index id="570" parent="505" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <ColNames>group_id
+permission_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="571" parent="505" name="auth_group_permissions_group_id_b120cbf9">
+      <ColNames>group_id</ColNames>
+    </index>
+    <index id="572" parent="505" name="auth_group_permissions_permission_id_84c5c92e">
+      <ColNames>permission_id</ColNames>
+    </index>
+    <key id="573" parent="505">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="574" parent="506" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="575" parent="506" name="content_type_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="576" parent="506" name="codename">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="577" parent="506" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="578" parent="506">
+      <ColNames>content_type_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>django_content_type</RefTableName>
+    </foreign-key>
+    <index id="579" parent="506" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <ColNames>content_type_id
+codename</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="580" parent="506" name="auth_permission_content_type_id_2f476e4b">
+      <ColNames>content_type_id</ColNames>
+    </index>
+    <key id="581" parent="506">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="582" parent="507" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="583" parent="507" name="password">
+      <DasType>varchar(128)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="584" parent="507" name="last_login">
+      <DasType>datetime|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="585" parent="507" name="is_superuser">
+      <DasType>bool|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="586" parent="507" name="username">
+      <DasType>varchar(150)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="587" parent="507" name="last_name">
+      <DasType>varchar(150)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="588" parent="507" name="email">
+      <DasType>varchar(254)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="589" parent="507" name="is_staff">
+      <DasType>bool|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="590" parent="507" name="is_active">
+      <DasType>bool|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="591" parent="507" name="date_joined">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="592" parent="507" name="first_name">
+      <DasType>varchar(150)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <index id="593" parent="507" name="sqlite_autoindex_auth_user_1">
+      <ColNames>username</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="594" parent="507">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="595" parent="507">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_auth_user_1</UnderlyingIndexName>
+    </key>
+    <column id="596" parent="508" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="597" parent="508" name="user_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="598" parent="508" name="group_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="599" parent="508">
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_user</RefTableName>
+    </foreign-key>
+    <foreign-key id="600" parent="508">
+      <ColNames>group_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_group</RefTableName>
+    </foreign-key>
+    <index id="601" parent="508" name="auth_user_groups_user_id_group_id_94350c0c_uniq">
+      <ColNames>user_id
+group_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="602" parent="508" name="auth_user_groups_user_id_6a12ed8b">
+      <ColNames>user_id</ColNames>
+    </index>
+    <index id="603" parent="508" name="auth_user_groups_group_id_97559544">
+      <ColNames>group_id</ColNames>
+    </index>
+    <key id="604" parent="508">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="605" parent="509" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="606" parent="509" name="user_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="607" parent="509" name="permission_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="608" parent="509">
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_user</RefTableName>
+    </foreign-key>
+    <foreign-key id="609" parent="509">
+      <ColNames>permission_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_permission</RefTableName>
+    </foreign-key>
+    <index id="610" parent="509" name="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq">
+      <ColNames>user_id
+permission_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="611" parent="509" name="auth_user_user_permissions_user_id_a95ead1b">
+      <ColNames>user_id</ColNames>
+    </index>
+    <index id="612" parent="509" name="auth_user_user_permissions_permission_id_1fbb5f2c">
+      <ColNames>permission_id</ColNames>
+    </index>
+    <key id="613" parent="509">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <check id="614" parent="510">
+      <Predicate>&quot;action_flag&quot; &gt;= 0</Predicate>
+    </check>
+    <column id="615" parent="510" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="616" parent="510" name="action_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="583" parent="507" name="title">
+    <column id="617" parent="510" name="object_id">
+      <DasType>text|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="618" parent="510" name="object_repr">
+      <DasType>varchar(200)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="619" parent="510" name="change_message">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="620" parent="510" name="content_type_id">
+      <DasType>integer|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="621" parent="510" name="user_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="622" parent="510" name="action_flag">
+      <DasType>smallint unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="623" parent="510">
+      <ColNames>content_type_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>django_content_type</RefTableName>
+    </foreign-key>
+    <foreign-key id="624" parent="510">
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_user</RefTableName>
+    </foreign-key>
+    <index id="625" parent="510" name="django_admin_log_content_type_id_c4bce8eb">
+      <ColNames>content_type_id</ColNames>
+    </index>
+    <index id="626" parent="510" name="django_admin_log_user_id_c564eba6">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="627" parent="510">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="628" parent="511" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="629" parent="511" name="app_label">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="630" parent="511" name="model">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="631" parent="511" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="632" parent="511">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="633" parent="512" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="634" parent="512" name="app">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="635" parent="512" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="636" parent="512" name="applied">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <key id="637" parent="512">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="638" parent="513" name="session_key">
+      <DasType>varchar(40)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="639" parent="513" name="session_data">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="640" parent="513" name="expire_date">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="641" parent="513" name="sqlite_autoindex_django_session_1">
+      <ColNames>session_key</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="642" parent="513" name="django_session_expire_date_a5c62663">
+      <ColNames>expire_date</ColNames>
+    </index>
+    <key id="643" parent="513">
+      <ColNames>session_key</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_django_session_1</UnderlyingIndexName>
+    </key>
+    <column id="644" parent="514" name="type">
+      <DasType>TEXT|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="645" parent="514" name="name">
+      <DasType>TEXT|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="646" parent="514" name="tbl_name">
+      <DasType>TEXT|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="647" parent="514" name="rootpage">
+      <DasType>INT|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="648" parent="514" name="sql">
+      <DasType>TEXT|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="649" parent="515" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="650" parent="515" name="seq">
+      <Position>2</Position>
+    </column>
+    <column id="651" parent="516" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="652" parent="516" name="name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="653" parent="516" name="longitude">
+      <DasType>real|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="654" parent="516" name="latitude">
+      <DasType>real|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="655" parent="516" name="nation">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="656" parent="516" name="province">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="657" parent="516" name="city">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="658" parent="516" name="district">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="659" parent="516" name="street">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="660" parent="516" name="street_number">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="661" parent="516" name="city_position_id">
+      <DasType>varchar(6)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <column id="662" parent="516" name="position_id">
+      <DasType>varchar(6)|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="663" parent="516" name="province_position_id">
+      <DasType>varchar(6)|0s</DasType>
+      <Position>13</Position>
+    </column>
+    <foreign-key id="664" parent="516">
+      <ColNames>city_position_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>utility_position</RefTableName>
+    </foreign-key>
+    <foreign-key id="665" parent="516">
+      <ColNames>position_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>utility_position</RefTableName>
+    </foreign-key>
+    <foreign-key id="666" parent="516">
+      <ColNames>province_position_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefColNames>id</RefColNames>
+      <RefTableName>utility_position</RefTableName>
+    </foreign-key>
+    <index id="667" parent="516" name="utility_address_city_position_id_0e9a3c9f">
+      <ColNames>city_position_id</ColNames>
+    </index>
+    <index id="668" parent="516" name="utility_address_position_id_07daaf4c">
+      <ColNames>position_id</ColNames>
+    </index>
+    <index id="669" parent="516" name="utility_address_province_position_id_a6a56f6e">
+      <ColNames>province_position_id</ColNames>
+    </index>
+    <key id="670" parent="516">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <check id="671" parent="517">
+      <Predicate>&quot;read&quot; &gt;= 0</Predicate>
+    </check>
+    <column id="672" parent="517" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="673" parent="517" name="time">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="674" parent="517" name="title">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="584" parent="507" name="content">
+    <column id="675" parent="517" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="585" parent="507" name="url">
+    <column id="676" parent="517" name="url">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="586" parent="507" name="action">
+    <column id="677" parent="517" name="action">
       <DasType>text|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="587" parent="507" name="visible">
+    <column id="678" parent="517" name="visible">
       <DasType>bool|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="588" parent="507" name="read">
+    <column id="679" parent="517" name="read">
       <DasType>integer unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="589" parent="507" name="cover_id">
+    <column id="680" parent="517" name="cover_id">
       <DasType>varchar(32)|0s</DasType>
       <Position>9</Position>
     </column>
-    <foreign-key id="590" parent="507">
+    <foreign-key id="681" parent="517">
       <ColNames>cover_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <index id="591" parent="507" name="utility_advertisement_cover_id_fdb6363e">
+    <index id="682" parent="517" name="utility_advertisement_cover_id_fdb6363e">
       <ColNames>cover_id</ColNames>
     </index>
-    <key id="592" parent="507">
+    <key id="683" parent="517">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <check id="593" parent="508">
+    <check id="684" parent="518">
       <Predicate>&quot;cluster&quot; &gt;= 0</Predicate>
     </check>
-    <column id="594" parent="508" name="id">
+    <column id="685" parent="518" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="595" parent="508" name="name">
+    <column id="686" parent="518" name="name">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="596" parent="508" name="password">
+    <column id="687" parent="518" name="password">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="597" parent="508" name="openid">
+    <column id="688" parent="518" name="openid">
       <DasType>varchar(128)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="598" parent="508" name="nickname">
+    <column id="689" parent="518" name="nickname">
       <DasType>varchar(10)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="599" parent="508" name="gender">
+    <column id="690" parent="518" name="gender">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="600" parent="508" name="sign">
+    <column id="691" parent="518" name="sign">
       <DasType>varchar(140)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="601" parent="508" name="email">
+    <column id="692" parent="518" name="email">
       <DasType>varchar(40)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="602" parent="508" name="phone">
+    <column id="693" parent="518" name="phone">
       <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="603" parent="508" name="birthday">
+    <column id="694" parent="518" name="birthday">
       <DasType>date|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="604" parent="508" name="time">
+    <column id="695" parent="518" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="605" parent="508" name="last_login_time">
+    <column id="696" parent="518" name="last_login_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="606" parent="508" name="cluster">
+    <column id="697" parent="518" name="cluster">
       <DasType>integer unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
-    <column id="607" parent="508" name="last_admin_message_time">
+    <column id="698" parent="518" name="last_admin_message_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>14</Position>
     </column>
-    <column id="608" parent="508" name="icon_id">
+    <column id="699" parent="518" name="icon_id">
       <DasType>varchar(32)|0s</DasType>
       <Position>15</Position>
     </column>
-    <column id="609" parent="508" name="position_id">
+    <column id="700" parent="518" name="position_id">
       <DasType>bigint|0s</DasType>
       <Position>16</Position>
     </column>
-    <foreign-key id="610" parent="508">
+    <foreign-key id="701" parent="518">
       <ColNames>icon_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <foreign-key id="611" parent="508">
+    <foreign-key id="702" parent="518">
       <ColNames>position_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_address</RefTableName>
     </foreign-key>
-    <index id="612" parent="508" name="sqlite_autoindex_utility_appuser_1">
+    <index id="703" parent="518" name="sqlite_autoindex_utility_appuser_1">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="613" parent="508" name="sqlite_autoindex_utility_appuser_2">
+    <index id="704" parent="518" name="sqlite_autoindex_utility_appuser_2">
       <ColNames>openid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="614" parent="508" name="sqlite_autoindex_utility_appuser_3">
+    <index id="705" parent="518" name="sqlite_autoindex_utility_appuser_3">
       <ColNames>position_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="615" parent="508" name="utility_appuser_icon_id_f0583f61">
+    <index id="706" parent="518" name="utility_appuser_icon_id_f0583f61">
       <ColNames>icon_id</ColNames>
     </index>
-    <key id="616" parent="508">
+    <key id="707" parent="518">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="617" parent="508">
+    <key id="708" parent="518">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_utility_appuser_1</UnderlyingIndexName>
     </key>
-    <key id="618" parent="508">
+    <key id="709" parent="518">
       <ColNames>openid</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_utility_appuser_2</UnderlyingIndexName>
     </key>
-    <key id="619" parent="508">
+    <key id="710" parent="518">
       <ColNames>position_id</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_utility_appuser_3</UnderlyingIndexName>
     </key>
-    <column id="620" parent="509" name="id">
+    <column id="711" parent="519" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="621" parent="509" name="appuser_id">
+    <column id="712" parent="519" name="appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="622" parent="509" name="travelnotes_id">
+    <column id="713" parent="519" name="travelnotes_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="623" parent="509">
+    <foreign-key id="714" parent="519">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <foreign-key id="624" parent="509">
+    <foreign-key id="715" parent="519">
       <ColNames>travelnotes_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotes</RefTableName>
     </foreign-key>
-    <index id="625" parent="509" name="utility_appuser_collection_appuser_id_travelnotes_id_19e7e46a_uniq">
+    <index id="716" parent="519" name="utility_appuser_collection_appuser_id_travelnotes_id_19e7e46a_uniq">
       <ColNames>appuser_id
 travelnotes_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="626" parent="509" name="utility_appuser_collection_appuser_id_41fd3ba1">
+    <index id="717" parent="519" name="utility_appuser_collection_appuser_id_41fd3ba1">
       <ColNames>appuser_id</ColNames>
     </index>
-    <index id="627" parent="509" name="utility_appuser_collection_travelnotes_id_7c89d69a">
+    <index id="718" parent="519" name="utility_appuser_collection_travelnotes_id_7c89d69a">
       <ColNames>travelnotes_id</ColNames>
     </index>
-    <key id="628" parent="509">
+    <key id="719" parent="519">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="629" parent="510" name="id">
+    <column id="720" parent="520" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="630" parent="510" name="appuser_id">
+    <column id="721" parent="520" name="appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="631" parent="510" name="sight_id">
+    <column id="722" parent="520" name="sight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="632" parent="510">
+    <foreign-key id="723" parent="520">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <foreign-key id="633" parent="510">
+    <foreign-key id="724" parent="520">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <index id="634" parent="510" name="utility_appuser_collections_sight_appuser_id_sight_id_d7f34387_uniq">
+    <index id="725" parent="520" name="utility_appuser_collections_sight_appuser_id_sight_id_d7f34387_uniq">
       <ColNames>appuser_id
 sight_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="635" parent="510" name="utility_appuser_collections_sight_appuser_id_1d4084c7">
+    <index id="726" parent="520" name="utility_appuser_collections_sight_appuser_id_1d4084c7">
       <ColNames>appuser_id</ColNames>
     </index>
-    <index id="636" parent="510" name="utility_appuser_collections_sight_sight_id_1f5e54f8">
+    <index id="727" parent="520" name="utility_appuser_collections_sight_sight_id_1f5e54f8">
       <ColNames>sight_id</ColNames>
     </index>
-    <key id="637" parent="510">
+    <key id="728" parent="520">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="638" parent="511" name="id">
+    <column id="729" parent="521" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="639" parent="511" name="appuser_id">
+    <column id="730" parent="521" name="from_appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="640" parent="511" name="message_id">
+    <column id="731" parent="521" name="to_appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="641" parent="511">
-      <ColNames>appuser_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_appuser</RefTableName>
-    </foreign-key>
-    <foreign-key id="642" parent="511">
-      <ColNames>message_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_message</RefTableName>
-    </foreign-key>
-    <index id="643" parent="511" name="utility_appuser_received_messages_appuser_id_message_id_0c0658bc_uniq">
-      <ColNames>appuser_id
-message_id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="644" parent="511" name="utility_appuser_received_messages_appuser_id_b42bf7bb">
-      <ColNames>appuser_id</ColNames>
-    </index>
-    <index id="645" parent="511" name="utility_appuser_received_messages_message_id_c2cb21f4">
-      <ColNames>message_id</ColNames>
-    </index>
-    <key id="646" parent="511">
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="647" parent="512" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="648" parent="512" name="from_appuser_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="649" parent="512" name="to_appuser_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <foreign-key id="650" parent="512">
+    <foreign-key id="732" parent="521">
       <ColNames>from_appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <foreign-key id="651" parent="512">
+    <foreign-key id="733" parent="521">
       <ColNames>to_appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="652" parent="512" name="utility_appuser_subscription_from_appuser_id_to_appuser_id_229fe5fb_uniq">
+    <index id="734" parent="521" name="utility_appuser_subscription_from_appuser_id_to_appuser_id_229fe5fb_uniq">
       <ColNames>from_appuser_id
 to_appuser_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="653" parent="512" name="utility_appuser_subscription_from_appuser_id_2bf36a5e">
+    <index id="735" parent="521" name="utility_appuser_subscription_from_appuser_id_2bf36a5e">
       <ColNames>from_appuser_id</ColNames>
     </index>
-    <index id="654" parent="512" name="utility_appuser_subscription_to_appuser_id_6f81259d">
+    <index id="736" parent="521" name="utility_appuser_subscription_to_appuser_id_6f81259d">
       <ColNames>to_appuser_id</ColNames>
     </index>
-    <key id="655" parent="512">
+    <key id="737" parent="521">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="656" parent="513" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="657" parent="513" name="appuser_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="658" parent="513" name="message_id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <foreign-key id="659" parent="513">
-      <ColNames>appuser_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_appuser</RefTableName>
-    </foreign-key>
-    <foreign-key id="660" parent="513">
-      <ColNames>message_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_message</RefTableName>
-    </foreign-key>
-    <index id="661" parent="513" name="utility_appuser_unread_messages_appuser_id_message_id_bf38aabb_uniq">
-      <ColNames>appuser_id
-message_id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="662" parent="513" name="utility_appuser_unread_messages_appuser_id_47405c9f">
-      <ColNames>appuser_id</ColNames>
-    </index>
-    <index id="663" parent="513" name="utility_appuser_unread_messages_message_id_798ebba1">
-      <ColNames>message_id</ColNames>
-    </index>
-    <key id="664" parent="513">
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="665" parent="514" name="name">
+    <column id="738" parent="522" name="name">
       <DasType>varchar(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="666" parent="514" name="province_id">
+    <column id="739" parent="522" name="province_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="667" parent="514">
+    <foreign-key id="740" parent="522">
       <ColNames>province_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_province</RefTableName>
     </foreign-key>
-    <index id="668" parent="514" name="sqlite_autoindex_utility_city_1">
+    <index id="741" parent="522" name="sqlite_autoindex_utility_city_1">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="669" parent="514" name="utility_city_province_id_9bc1eb93">
+    <index id="742" parent="522" name="utility_city_province_id_9bc1eb93">
       <ColNames>province_id</ColNames>
     </index>
-    <key id="670" parent="514">
+    <key id="743" parent="522">
       <ColNames>name</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_utility_city_1</UnderlyingIndexName>
     </key>
-    <column id="671" parent="515" name="id">
+    <column id="744" parent="523" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="672" parent="515" name="type">
+    <column id="745" parent="523" name="type">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="673" parent="515" name="time">
+    <column id="746" parent="523" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="674" parent="515" name="content">
+    <column id="747" parent="523" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="675" parent="515" name="deleted">
+    <column id="748" parent="523" name="deleted">
       <DasType>bool|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="676" parent="515" name="companion_master_id">
+    <column id="749" parent="523" name="companion_master_id">
       <DasType>bigint|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="677" parent="515" name="master_id">
+    <column id="750" parent="523" name="master_id">
       <DasType>bigint|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="678" parent="515" name="owner_id">
+    <column id="751" parent="523" name="owner_id">
       <DasType>bigint|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="679" parent="515" name="sight_master_id">
+    <column id="752" parent="523" name="sight_master_id">
       <DasType>bigint|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="680" parent="515" name="reply_id">
+    <column id="753" parent="523" name="reply_id">
       <DasType>bigint|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="681" parent="515" name="reply_root_id">
+    <column id="754" parent="523" name="reply_root_id">
       <DasType>bigint|0s</DasType>
       <Position>11</Position>
     </column>
-    <foreign-key id="682" parent="515">
+    <foreign-key id="755" parent="523">
       <ColNames>companion_master_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_companion</RefTableName>
     </foreign-key>
-    <foreign-key id="683" parent="515">
+    <foreign-key id="756" parent="523">
       <ColNames>master_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotes</RefTableName>
     </foreign-key>
-    <foreign-key id="684" parent="515">
+    <foreign-key id="757" parent="523">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <foreign-key id="685" parent="515">
+    <foreign-key id="758" parent="523">
       <ColNames>sight_master_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <foreign-key id="686" parent="515">
+    <foreign-key id="759" parent="523">
       <ColNames>reply_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_comment</RefTableName>
     </foreign-key>
-    <foreign-key id="687" parent="515">
+    <foreign-key id="760" parent="523">
       <ColNames>reply_root_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_comment</RefTableName>
     </foreign-key>
-    <index id="688" parent="515" name="utility_comment_companion_master_id_fd1269b0">
+    <index id="761" parent="523" name="utility_comment_companion_master_id_fd1269b0">
       <ColNames>companion_master_id</ColNames>
     </index>
-    <index id="689" parent="515" name="utility_comment_master_id_a90bcad3">
+    <index id="762" parent="523" name="utility_comment_master_id_a90bcad3">
       <ColNames>master_id</ColNames>
     </index>
-    <index id="690" parent="515" name="utility_comment_owner_id_ee212990">
+    <index id="763" parent="523" name="utility_comment_owner_id_ee212990">
       <ColNames>owner_id</ColNames>
     </index>
-    <index id="691" parent="515" name="utility_comment_sight_master_id_c39690d5">
+    <index id="764" parent="523" name="utility_comment_sight_master_id_c39690d5">
       <ColNames>sight_master_id</ColNames>
     </index>
-    <index id="692" parent="515" name="utility_comment_reply_id_986223c3">
+    <index id="765" parent="523" name="utility_comment_reply_id_986223c3">
       <ColNames>reply_id</ColNames>
     </index>
-    <index id="693" parent="515" name="utility_comment_reply_root_id_30df037c">
+    <index id="766" parent="523" name="utility_comment_reply_root_id_30df037c">
       <ColNames>reply_root_id</ColNames>
     </index>
-    <key id="694" parent="515">
+    <key id="767" parent="523">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="695" parent="516" name="id">
+    <column id="768" parent="524" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="696" parent="516" name="comment_id">
+    <column id="769" parent="524" name="comment_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="697" parent="516" name="appuser_id">
+    <column id="770" parent="524" name="appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="698" parent="516">
+    <foreign-key id="771" parent="524">
       <ColNames>comment_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_comment</RefTableName>
     </foreign-key>
-    <foreign-key id="699" parent="516">
+    <foreign-key id="772" parent="524">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="700" parent="516" name="utility_comment_likes_comment_id_appuser_id_62b75c53_uniq">
+    <index id="773" parent="524" name="utility_comment_likes_comment_id_appuser_id_62b75c53_uniq">
       <ColNames>comment_id
 appuser_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="701" parent="516" name="utility_comment_likes_comment_id_7433a054">
+    <index id="774" parent="524" name="utility_comment_likes_comment_id_7433a054">
       <ColNames>comment_id</ColNames>
     </index>
-    <index id="702" parent="516" name="utility_comment_likes_appuser_id_9508ffe7">
+    <index id="775" parent="524" name="utility_comment_likes_appuser_id_9508ffe7">
       <ColNames>appuser_id</ColNames>
     </index>
-    <key id="703" parent="516">
+    <key id="776" parent="524">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <check id="704" parent="517">
+    <check id="777" parent="525">
       <Predicate>&quot;capacity&quot; &gt;= 0</Predicate>
     </check>
-    <column id="705" parent="517" name="id">
+    <column id="778" parent="525" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="706" parent="517" name="time">
+    <column id="779" parent="525" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="707" parent="517" name="start_time">
+    <column id="780" parent="525" name="start_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="708" parent="517" name="end_time">
+    <column id="781" parent="525" name="end_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="709" parent="517" name="deadline">
+    <column id="782" parent="525" name="deadline">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="710" parent="517" name="title">
+    <column id="783" parent="525" name="title">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="711" parent="517" name="content">
+    <column id="784" parent="525" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="712" parent="517" name="private_content">
+    <column id="785" parent="525" name="private_content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="713" parent="517" name="capacity">
+    <column id="786" parent="525" name="capacity">
       <DasType>integer unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="714" parent="517" name="forbidden">
+    <column id="787" parent="525" name="forbidden">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="715" parent="517" name="forbidden_reason">
+    <column id="788" parent="525" name="forbidden_reason">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="716" parent="517" name="owner_id">
+    <column id="789" parent="525" name="owner_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="717" parent="517" name="position_id">
+    <column id="790" parent="525" name="position_id">
       <DasType>bigint|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="718" parent="517" name="schedule_id">
+    <column id="791" parent="525" name="schedule_id">
       <DasType>bigint|0s</DasType>
       <Position>14</Position>
     </column>
-    <foreign-key id="719" parent="517">
+    <foreign-key id="792" parent="525">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <foreign-key id="720" parent="517">
+    <foreign-key id="793" parent="525">
       <ColNames>position_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_address</RefTableName>
     </foreign-key>
-    <foreign-key id="721" parent="517">
+    <foreign-key id="794" parent="525">
       <ColNames>schedule_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_schedule</RefTableName>
     </foreign-key>
-    <index id="722" parent="517" name="sqlite_autoindex_utility_companion_1">
+    <index id="795" parent="525" name="sqlite_autoindex_utility_companion_1">
       <ColNames>position_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="723" parent="517" name="utility_companion_owner_id_46cf5ba6">
+    <index id="796" parent="525" name="utility_companion_owner_id_46cf5ba6">
       <ColNames>owner_id</ColNames>
     </index>
-    <index id="724" parent="517" name="utility_companion_schedule_id_fcf03f30">
+    <index id="797" parent="525" name="utility_companion_schedule_id_fcf03f30">
       <ColNames>schedule_id</ColNames>
     </index>
-    <key id="725" parent="517">
+    <key id="798" parent="525">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="726" parent="517">
+    <key id="799" parent="525">
       <ColNames>position_id</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_utility_companion_1</UnderlyingIndexName>
     </key>
-    <column id="727" parent="518" name="id">
+    <column id="800" parent="526" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="728" parent="518" name="companion_id">
+    <column id="801" parent="526" name="companion_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="729" parent="518" name="appuser_id">
+    <column id="802" parent="526" name="appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="730" parent="518">
+    <foreign-key id="803" parent="526">
       <ColNames>companion_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_companion</RefTableName>
     </foreign-key>
-    <foreign-key id="731" parent="518">
+    <foreign-key id="804" parent="526">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="732" parent="518" name="utility_companion_cancelled_users_companion_id_appuser_id_a81b4b58_uniq">
+    <index id="805" parent="526" name="utility_companion_cancelled_users_companion_id_appuser_id_a81b4b58_uniq">
       <ColNames>companion_id
 appuser_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="733" parent="518" name="utility_companion_cancelled_users_companion_id_30a27bda">
+    <index id="806" parent="526" name="utility_companion_cancelled_users_companion_id_30a27bda">
       <ColNames>companion_id</ColNames>
     </index>
-    <index id="734" parent="518" name="utility_companion_cancelled_users_appuser_id_fc1a8b8f">
+    <index id="807" parent="526" name="utility_companion_cancelled_users_appuser_id_fc1a8b8f">
       <ColNames>appuser_id</ColNames>
     </index>
-    <key id="735" parent="518">
+    <key id="808" parent="526">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="736" parent="519" name="id">
+    <column id="809" parent="527" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="737" parent="519" name="companion_id">
+    <column id="810" parent="527" name="companion_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="738" parent="519" name="appuser_id">
+    <column id="811" parent="527" name="appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="739" parent="519">
+    <foreign-key id="812" parent="527">
       <ColNames>companion_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_companion</RefTableName>
     </foreign-key>
-    <foreign-key id="740" parent="519">
+    <foreign-key id="813" parent="527">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="741" parent="519" name="utility_companion_fellows_companion_id_appuser_id_f6c00cfb_uniq">
+    <index id="814" parent="527" name="utility_companion_fellows_companion_id_appuser_id_f6c00cfb_uniq">
       <ColNames>companion_id
 appuser_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="742" parent="519" name="utility_companion_fellows_companion_id_038e102c">
+    <index id="815" parent="527" name="utility_companion_fellows_companion_id_038e102c">
       <ColNames>companion_id</ColNames>
     </index>
-    <index id="743" parent="519" name="utility_companion_fellows_appuser_id_4dbe6c71">
+    <index id="816" parent="527" name="utility_companion_fellows_appuser_id_4dbe6c71">
       <ColNames>appuser_id</ColNames>
     </index>
-    <key id="744" parent="519">
+    <key id="817" parent="527">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="745" parent="520" name="id">
+    <column id="818" parent="528" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="746" parent="520" name="companion_id">
+    <column id="819" parent="528" name="companion_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="747" parent="520" name="tag_id">
+    <column id="820" parent="528" name="tag_id">
       <DasType>varchar(48)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="748" parent="520">
+    <foreign-key id="821" parent="528">
       <ColNames>companion_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_companion</RefTableName>
     </foreign-key>
-    <foreign-key id="749" parent="520">
+    <foreign-key id="822" parent="528">
       <ColNames>tag_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>name</RefColNames>
       <RefTableName>utility_tag</RefTableName>
     </foreign-key>
-    <index id="750" parent="520" name="utility_companion_tag_companion_id_tag_id_ec721576_uniq">
+    <index id="823" parent="528" name="utility_companion_tag_companion_id_tag_id_ec721576_uniq">
       <ColNames>companion_id
 tag_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="751" parent="520" name="utility_companion_tag_companion_id_daa996f4">
+    <index id="824" parent="528" name="utility_companion_tag_companion_id_daa996f4">
       <ColNames>companion_id</ColNames>
     </index>
-    <index id="752" parent="520" name="utility_companion_tag_tag_id_811ddbda">
+    <index id="825" parent="528" name="utility_companion_tag_tag_id_811ddbda">
       <ColNames>tag_id</ColNames>
     </index>
-    <key id="753" parent="520">
+    <key id="826" parent="528">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="754" parent="521" name="id">
+    <column id="827" parent="529" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="755" parent="521" name="time">
+    <column id="828" parent="529" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="756" parent="521" name="content">
+    <column id="829" parent="529" name="content">
       <DasType>text|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="757" parent="521" name="owner_id">
+    <column id="830" parent="529" name="owner_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="758" parent="521">
+    <foreign-key id="831" parent="529">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="759" parent="521" name="utility_feedback_owner_id_be093273">
+    <index id="832" parent="529" name="utility_feedback_owner_id_be093273">
       <ColNames>owner_id</ColNames>
     </index>
-    <key id="760" parent="521">
+    <key id="833" parent="529">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="761" parent="522" name="id">
+    <column id="834" parent="530" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="762" parent="522" name="flight_no">
+    <column id="835" parent="530" name="flight_no">
       <DasType>varchar(12)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="763" parent="522" name="airline">
+    <column id="836" parent="530" name="airline">
       <DasType>varchar(12)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="764" parent="522" name="economy_minprice">
+    <column id="837" parent="530" name="economy_minprice">
       <DasType>real|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="765" parent="522" name="economy_discount">
+    <column id="838" parent="530" name="economy_discount">
       <DasType>real|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="766" parent="522" name="bussiness_minprice">
+    <column id="839" parent="530" name="bussiness_minprice">
       <DasType>real|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="767" parent="522" name="bussiness_discount">
+    <column id="840" parent="530" name="bussiness_discount">
       <DasType>real|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="768" parent="522" name="food">
+    <column id="841" parent="530" name="food">
       <DasType>bool|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="769" parent="522" name="depart_time">
+    <column id="842" parent="530" name="depart_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="770" parent="522" name="cost_time">
+    <column id="843" parent="530" name="cost_time">
       <DasType>time|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="771" parent="522" name="arrival_time">
+    <column id="844" parent="530" name="arrival_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="772" parent="522" name="status">
+    <column id="845" parent="530" name="status">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="773" parent="522" name="arrivalport_id">
+    <column id="846" parent="530" name="arrivalport_id">
       <DasType>bigint|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="774" parent="522" name="city_id">
+    <column id="847" parent="530" name="city_id">
       <DasType>varchar(8)|0s</DasType>
       <Position>14</Position>
     </column>
-    <column id="775" parent="522" name="departport_id">
+    <column id="848" parent="530" name="departport_id">
       <DasType>bigint|0s</DasType>
       <Position>15</Position>
     </column>
-    <column id="776" parent="522" name="endcity_id">
+    <column id="849" parent="530" name="endcity_id">
       <DasType>varchar(8)|0s</DasType>
       <Position>16</Position>
     </column>
-    <foreign-key id="777" parent="522">
+    <foreign-key id="850" parent="530">
       <ColNames>arrivalport_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_port</RefTableName>
     </foreign-key>
-    <foreign-key id="778" parent="522">
+    <foreign-key id="851" parent="530">
       <ColNames>city_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>name</RefColNames>
       <RefTableName>utility_city</RefTableName>
     </foreign-key>
-    <foreign-key id="779" parent="522">
+    <foreign-key id="852" parent="530">
       <ColNames>departport_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_port</RefTableName>
     </foreign-key>
-    <foreign-key id="780" parent="522">
+    <foreign-key id="853" parent="530">
       <ColNames>endcity_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>name</RefColNames>
       <RefTableName>utility_city</RefTableName>
     </foreign-key>
-    <index id="781" parent="522" name="utility_flight_arrivalport_id_928bc2bb">
+    <index id="854" parent="530" name="utility_flight_arrivalport_id_928bc2bb">
       <ColNames>arrivalport_id</ColNames>
     </index>
-    <index id="782" parent="522" name="utility_flight_city_id_915be073">
+    <index id="855" parent="530" name="utility_flight_city_id_915be073">
       <ColNames>city_id</ColNames>
     </index>
-    <index id="783" parent="522" name="utility_flight_departport_id_3a595c5d">
+    <index id="856" parent="530" name="utility_flight_departport_id_3a595c5d">
       <ColNames>departport_id</ColNames>
     </index>
-    <index id="784" parent="522" name="utility_flight_endcity_id_439cb183">
+    <index id="857" parent="530" name="utility_flight_endcity_id_439cb183">
       <ColNames>endcity_id</ColNames>
     </index>
-    <key id="785" parent="522">
+    <key id="858" parent="530">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="786" parent="523" name="id">
+    <column id="859" parent="531" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="787" parent="523" name="name">
+    <column id="860" parent="531" name="name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="788" parent="523" name="description">
+    <column id="861" parent="531" name="description">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="789" parent="523" name="price">
+    <column id="862" parent="531" name="price">
       <DasType>decimal|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <key id="790" parent="523">
+    <key id="863" parent="531">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="791" parent="524" name="id">
+    <column id="864" parent="532" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="792" parent="524" name="food_id">
+    <column id="865" parent="532" name="food_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="793" parent="524" name="image_id">
+    <column id="866" parent="532" name="image_id">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="794" parent="524">
+    <foreign-key id="867" parent="532">
       <ColNames>food_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_food</RefTableName>
     </foreign-key>
-    <foreign-key id="795" parent="524">
+    <foreign-key id="868" parent="532">
       <ColNames>image_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <index id="796" parent="524" name="utility_food_images_food_id_image_id_b66b6b52_uniq">
+    <index id="869" parent="532" name="utility_food_images_food_id_image_id_b66b6b52_uniq">
       <ColNames>food_id
 image_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="797" parent="524" name="utility_food_images_food_id_59bb6bd5">
+    <index id="870" parent="532" name="utility_food_images_food_id_59bb6bd5">
       <ColNames>food_id</ColNames>
     </index>
-    <index id="798" parent="524" name="utility_food_images_image_id_158885d3">
+    <index id="871" parent="532" name="utility_food_images_image_id_158885d3">
       <ColNames>image_id</ColNames>
     </index>
-    <key id="799" parent="524">
+    <key id="872" parent="532">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="800" parent="525" name="id">
+    <column id="873" parent="533" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="801" parent="525" name="name">
+    <column id="874" parent="533" name="name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="802" parent="525" name="description">
+    <column id="875" parent="533" name="description">
       <DasType>text|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="803" parent="525" name="check_in_time">
+    <column id="876" parent="533" name="check_in_time">
       <DasType>time|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="804" parent="525" name="check_out_time">
+    <column id="877" parent="533" name="check_out_time">
       <DasType>time|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="805" parent="525" name="created_at">
+    <column id="878" parent="533" name="created_at">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="806" parent="525" name="updated_at">
+    <column id="879" parent="533" name="updated_at">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="807" parent="525" name="rating">
+    <column id="880" parent="533" name="rating">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="808" parent="525" name="price">
+    <column id="881" parent="533" name="price">
       <DasType>decimal|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="809" parent="525" name="address_id">
+    <column id="882" parent="533" name="address_id">
       <DasType>bigint|0s</DasType>
       <Position>10</Position>
     </column>
-    <foreign-key id="810" parent="525">
+    <foreign-key id="883" parent="533">
       <ColNames>address_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_address</RefTableName>
     </foreign-key>
-    <index id="811" parent="525" name="utility_hotel_address_id_27209427">
+    <index id="884" parent="533" name="utility_hotel_address_id_27209427">
       <ColNames>address_id</ColNames>
     </index>
-    <key id="812" parent="525">
+    <key id="885" parent="533">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="813" parent="526" name="id">
+    <column id="886" parent="534" name="id">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="814" parent="526" name="time">
+    <column id="887" parent="534" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="815" parent="526" name="description">
+    <column id="888" parent="534" name="description">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="816" parent="526" name="image">
+    <column id="889" parent="534" name="image">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="817" parent="526" name="sqlite_autoindex_utility_image_1">
+    <index id="890" parent="534" name="sqlite_autoindex_utility_image_1">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="818" parent="526">
+    <key id="891" parent="534">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_utility_image_1</UnderlyingIndexName>
     </key>
-    <column id="819" parent="527" name="id">
+    <column id="892" parent="535" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="820" parent="527" name="name">
+    <column id="893" parent="535" name="name">
       <DasType>varchar(16)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="821" parent="527" name="longitude">
+    <column id="894" parent="535" name="longitude">
       <DasType>real|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="822" parent="527" name="latitude">
+    <column id="895" parent="535" name="latitude">
       <DasType>real|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="823" parent="527" name="desc">
+    <column id="896" parent="535" name="desc">
       <DasType>text|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="824" parent="527" name="sight_id">
+    <column id="897" parent="535" name="sight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <foreign-key id="825" parent="527">
+    <foreign-key id="898" parent="535">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <index id="826" parent="527" name="utility_innersight_sight_id_59618003">
+    <index id="899" parent="535" name="utility_innersight_sight_id_59618003">
       <ColNames>sight_id</ColNames>
     </index>
-    <key id="827" parent="527">
+    <key id="900" parent="535">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="828" parent="528" name="id">
+    <column id="901" parent="536" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="829" parent="528" name="time">
+    <column id="902" parent="536" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="830" parent="528" name="action">
+    <column id="903" parent="536" name="action">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="831" parent="528" name="target_id">
+    <column id="904" parent="536" name="target_id">
       <DasType>integer|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="832" parent="528" name="remarks">
+    <column id="905" parent="536" name="remarks">
       <DasType>varchar(48)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="833" parent="528" name="user_id">
+    <column id="906" parent="536" name="user_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <foreign-key id="834" parent="528">
+    <foreign-key id="907" parent="536">
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="835" parent="528" name="utility_log_user_id_916d7d8e">
+    <index id="908" parent="536" name="utility_log_user_id_916d7d8e">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="836" parent="528">
+    <key id="909" parent="536">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="837" parent="529" name="id">
+    <column id="910" parent="537" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="838" parent="529" name="time">
-      <DasType>datetime|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="839" parent="529" name="type">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="840" parent="529" name="content">
-      <DasType>text|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="841" parent="529" name="owner_id">
-      <DasType>bigint|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="842" parent="529" name="related_comment_id">
-      <DasType>bigint|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="843" parent="529" name="related_companion_id">
-      <DasType>bigint|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <column id="844" parent="529" name="related_flight_id">
-      <DasType>bigint|0s</DasType>
-      <Position>8</Position>
-    </column>
-    <column id="845" parent="529" name="related_schedule_item_id">
-      <DasType>bigint|0s</DasType>
-      <Position>9</Position>
-    </column>
-    <column id="846" parent="529" name="related_travel_id">
-      <DasType>bigint|0s</DasType>
-      <Position>10</Position>
-    </column>
-    <foreign-key id="847" parent="529">
-      <ColNames>owner_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_appuser</RefTableName>
-    </foreign-key>
-    <foreign-key id="848" parent="529">
-      <ColNames>related_comment_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_comment</RefTableName>
-    </foreign-key>
-    <foreign-key id="849" parent="529">
-      <ColNames>related_companion_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_companion</RefTableName>
-    </foreign-key>
-    <foreign-key id="850" parent="529">
-      <ColNames>related_flight_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_flight</RefTableName>
-    </foreign-key>
-    <foreign-key id="851" parent="529">
-      <ColNames>related_schedule_item_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_scheduleitem</RefTableName>
-    </foreign-key>
-    <foreign-key id="852" parent="529">
-      <ColNames>related_travel_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <RefColNames>id</RefColNames>
-      <RefTableName>utility_travelnotes</RefTableName>
-    </foreign-key>
-    <index id="853" parent="529" name="utility_message_owner_id_c7c7869d">
-      <ColNames>owner_id</ColNames>
-    </index>
-    <index id="854" parent="529" name="utility_message_related_comment_id_08167431">
-      <ColNames>related_comment_id</ColNames>
-    </index>
-    <index id="855" parent="529" name="utility_message_related_companion_id_810267fa">
-      <ColNames>related_companion_id</ColNames>
-    </index>
-    <index id="856" parent="529" name="utility_message_related_flight_id_1dad5196">
-      <ColNames>related_flight_id</ColNames>
-    </index>
-    <index id="857" parent="529" name="utility_message_related_schedule_item_id_a0086207">
-      <ColNames>related_schedule_item_id</ColNames>
-    </index>
-    <index id="858" parent="529" name="utility_message_related_travel_id_c638aa5d">
-      <ColNames>related_travel_id</ColNames>
-    </index>
-    <key id="859" parent="529">
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="860" parent="530" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="861" parent="530" name="name">
+    <column id="911" parent="537" name="name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="862" parent="530" name="owner_id">
+    <column id="912" parent="537" name="owner_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="863" parent="530">
+    <foreign-key id="913" parent="537">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="864" parent="530" name="utility_plan_owner_id_74ad8650">
+    <index id="914" parent="537" name="utility_plan_owner_id_74ad8650">
       <ColNames>owner_id</ColNames>
     </index>
-    <key id="865" parent="530">
+    <key id="915" parent="537">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="866" parent="531" name="id">
+    <column id="916" parent="538" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="867" parent="531" name="plan_id">
+    <column id="917" parent="538" name="plan_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="868" parent="531" name="sight_id">
+    <column id="918" parent="538" name="sight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="869" parent="531">
+    <foreign-key id="919" parent="538">
       <ColNames>plan_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_plan</RefTableName>
     </foreign-key>
-    <foreign-key id="870" parent="531">
+    <foreign-key id="920" parent="538">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <index id="871" parent="531" name="utility_plan_sights_plan_id_sight_id_c066e1f0_uniq">
+    <index id="921" parent="538" name="utility_plan_sights_plan_id_sight_id_c066e1f0_uniq">
       <ColNames>plan_id
 sight_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="872" parent="531" name="utility_plan_sights_plan_id_6cb6451f">
+    <index id="922" parent="538" name="utility_plan_sights_plan_id_6cb6451f">
       <ColNames>plan_id</ColNames>
     </index>
-    <index id="873" parent="531" name="utility_plan_sights_sight_id_34582537">
+    <index id="923" parent="538" name="utility_plan_sights_sight_id_34582537">
       <ColNames>sight_id</ColNames>
     </index>
-    <key id="874" parent="531">
+    <key id="924" parent="538">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="875" parent="532" name="id">
+    <column id="925" parent="539" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="876" parent="532" name="code">
+    <column id="926" parent="539" name="code">
       <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="877" parent="532" name="name">
+    <column id="927" parent="539" name="name">
       <DasType>varchar(12)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <key id="878" parent="532">
+    <key id="928" parent="539">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="879" parent="533" name="id">
+    <column id="929" parent="540" name="id">
       <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="880" parent="533" name="name">
+    <column id="930" parent="540" name="name">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="881" parent="533" name="longitude">
+    <column id="931" parent="540" name="longitude">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="882" parent="533" name="latitude">
+    <column id="932" parent="540" name="latitude">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="883" parent="533" name="description">
+    <column id="933" parent="540" name="description">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="884" parent="533" name="visibility">
+    <column id="934" parent="540" name="visibility">
       <DasType>bool|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="885" parent="533" name="cover_id">
+    <column id="935" parent="540" name="cover_id">
       <DasType>varchar(32)|0s</DasType>
       <Position>7</Position>
     </column>
-    <foreign-key id="886" parent="533">
+    <foreign-key id="936" parent="540">
       <ColNames>cover_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <index id="887" parent="533" name="sqlite_autoindex_utility_position_1">
+    <index id="937" parent="540" name="sqlite_autoindex_utility_position_1">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="888" parent="533" name="utility_position_cover_id_630c3a1a">
+    <index id="938" parent="540" name="utility_position_cover_id_630c3a1a">
       <ColNames>cover_id</ColNames>
     </index>
-    <key id="889" parent="533">
+    <key id="939" parent="540">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_utility_position_1</UnderlyingIndexName>
     </key>
-    <column id="890" parent="534" name="id">
+    <column id="940" parent="541" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="891" parent="534" name="position_id">
+    <column id="941" parent="541" name="position_id">
       <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="892" parent="534" name="image_id">
+    <column id="942" parent="541" name="image_id">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="893" parent="534">
+    <foreign-key id="943" parent="541">
       <ColNames>position_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_position</RefTableName>
     </foreign-key>
-    <foreign-key id="894" parent="534">
+    <foreign-key id="944" parent="541">
       <ColNames>image_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <index id="895" parent="534" name="utility_position_images_position_id_image_id_9ea773f9_uniq">
+    <index id="945" parent="541" name="utility_position_images_position_id_image_id_9ea773f9_uniq">
       <ColNames>position_id
 image_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="896" parent="534" name="utility_position_images_position_id_d697ab3f">
+    <index id="946" parent="541" name="utility_position_images_position_id_d697ab3f">
       <ColNames>position_id</ColNames>
     </index>
-    <index id="897" parent="534" name="utility_position_images_image_id_9aabd5c5">
+    <index id="947" parent="541" name="utility_position_images_image_id_9aabd5c5">
       <ColNames>image_id</ColNames>
     </index>
-    <key id="898" parent="534">
+    <key id="948" parent="541">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="899" parent="535" name="id">
+    <column id="949" parent="542" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="900" parent="535" name="name">
+    <column id="950" parent="542" name="name">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="901" parent="535" name="price">
+    <column id="951" parent="542" name="price">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="902" parent="535" name="inner_sight_id">
+    <column id="952" parent="542" name="inner_sight_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="903" parent="535" name="sight_id">
+    <column id="953" parent="542" name="sight_id">
       <DasType>bigint|0s</DasType>
       <Position>5</Position>
     </column>
-    <foreign-key id="904" parent="535">
+    <foreign-key id="954" parent="542">
       <ColNames>inner_sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_innersight</RefTableName>
     </foreign-key>
-    <foreign-key id="905" parent="535">
+    <foreign-key id="955" parent="542">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <index id="906" parent="535" name="utility_price_inner_sight_id_eed07b44">
+    <index id="956" parent="542" name="utility_price_inner_sight_id_eed07b44">
       <ColNames>inner_sight_id</ColNames>
     </index>
-    <index id="907" parent="535" name="utility_price_sight_id_5b480222">
+    <index id="957" parent="542" name="utility_price_sight_id_5b480222">
       <ColNames>sight_id</ColNames>
     </index>
-    <key id="908" parent="535">
+    <key id="958" parent="542">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="909" parent="536" name="id">
+    <column id="959" parent="543" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="910" parent="536" name="name">
+    <column id="960" parent="543" name="name">
       <DasType>varchar(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="911" parent="536">
+    <key id="961" parent="543">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="912" parent="537" name="id">
+    <column id="962" parent="544" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="913" parent="537" name="date">
+    <column id="963" parent="544" name="date">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="914" parent="537" name="amount">
+    <column id="964" parent="544" name="amount">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="915" parent="537" name="owner_id">
+    <column id="965" parent="544" name="owner_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="916" parent="537">
+    <foreign-key id="966" parent="544">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotes</RefTableName>
     </foreign-key>
-    <index id="917" parent="537" name="utility_readrecord_owner_id_a7a5f7d5">
+    <index id="967" parent="544" name="utility_readrecord_owner_id_a7a5f7d5">
       <ColNames>owner_id</ColNames>
     </index>
-    <key id="918" parent="537">
+    <key id="968" parent="544">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="919" parent="538" name="id">
+    <column id="969" parent="545" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="920" parent="538" name="create_time">
+    <column id="970" parent="545" name="create_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="921" parent="538" name="date">
+    <column id="971" parent="545" name="date">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="922" parent="538" name="title">
+    <column id="972" parent="545" name="title">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="923" parent="538" name="remarks">
+    <column id="973" parent="545" name="remarks">
       <DasType>text|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="924" parent="538" name="visibility">
+    <column id="974" parent="545" name="visibility">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="925" parent="538" name="forbidden">
+    <column id="975" parent="545" name="forbidden">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="926" parent="538" name="forbidden_reason">
+    <column id="976" parent="545" name="forbidden_reason">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="927" parent="538" name="owner_id">
+    <column id="977" parent="545" name="owner_id">
       <DasType>bigint|0s</DasType>
       <Position>9</Position>
     </column>
-    <foreign-key id="928" parent="538">
+    <foreign-key id="978" parent="545">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="929" parent="538" name="utility_schedule_owner_id_1d43ae3c">
+    <index id="979" parent="545" name="utility_schedule_owner_id_1d43ae3c">
       <ColNames>owner_id</ColNames>
     </index>
-    <key id="930" parent="538">
+    <key id="980" parent="545">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="931" parent="539" name="id">
+    <column id="981" parent="546" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="932" parent="539" name="start_time">
+    <column id="982" parent="546" name="start_time">
       <DasType>time|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="933" parent="539" name="end_time">
+    <column id="983" parent="546" name="end_time">
       <DasType>time|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="934" parent="539" name="content">
+    <column id="984" parent="546" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="935" parent="539" name="budget">
+    <column id="985" parent="546" name="budget">
       <DasType>real|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="936" parent="539" name="real_consumption">
+    <column id="986" parent="546" name="real_consumption">
       <DasType>real|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="937" parent="539" name="if_alarm">
+    <column id="987" parent="546" name="if_alarm">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="938" parent="539" name="position_id">
+    <column id="988" parent="546" name="position_id">
       <DasType>bigint|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="939" parent="539" name="schedule_id">
+    <column id="989" parent="546" name="schedule_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <foreign-key id="940" parent="539">
+    <foreign-key id="990" parent="546">
       <ColNames>position_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_address</RefTableName>
     </foreign-key>
-    <foreign-key id="941" parent="539">
+    <foreign-key id="991" parent="546">
       <ColNames>schedule_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_schedule</RefTableName>
     </foreign-key>
-    <index id="942" parent="539" name="utility_scheduleitem_position_id_98a92b9b">
+    <index id="992" parent="546" name="utility_scheduleitem_position_id_98a92b9b">
       <ColNames>position_id</ColNames>
     </index>
-    <index id="943" parent="539" name="utility_scheduleitem_schedule_id_03fc05f7">
+    <index id="993" parent="546" name="utility_scheduleitem_schedule_id_03fc05f7">
       <ColNames>schedule_id</ColNames>
     </index>
-    <key id="944" parent="539">
+    <key id="994" parent="546">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="945" parent="540" name="id">
+    <column id="995" parent="547" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="946" parent="540" name="name">
+    <column id="996" parent="547" name="name">
       <DasType>varchar(24)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="947" parent="540">
+    <key id="997" parent="547">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="948" parent="541" name="id">
+    <check id="998" parent="548">
+      <Predicate>(JSON_VALID(&quot;embedding&quot;) OR &quot;embedding&quot; IS NULL)</Predicate>
+    </check>
+    <column id="999" parent="548" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="949" parent="541" name="name">
+    <column id="1000" parent="548" name="name">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="950" parent="541" name="desc">
+    <column id="1001" parent="548" name="desc">
       <DasType>text|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="951" parent="541" name="hot">
+    <column id="1002" parent="548" name="hot">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="952" parent="541" name="grade">
+    <column id="1003" parent="548" name="grade">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="953" parent="541" name="open_time">
+    <column id="1004" parent="548" name="open_time">
       <DasType>varchar(128)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="954" parent="541" name="playtime">
+    <column id="1005" parent="548" name="playtime">
       <DasType>real|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="955" parent="541" name="address_id">
+    <column id="1006" parent="548" name="address_id">
       <DasType>bigint|0s</DasType>
       <Position>8</Position>
     </column>
-    <foreign-key id="956" parent="541">
+    <column id="1007" parent="548" name="embedding">
+      <DasType>text|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <foreign-key id="1008" parent="548">
       <ColNames>address_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_address</RefTableName>
     </foreign-key>
-    <index id="957" parent="541" name="sqlite_autoindex_utility_sight_1">
+    <index id="1009" parent="548" name="sqlite_autoindex_utility_sight_1">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="958" parent="541" name="utility_sight_address_id_d1c4f469">
+    <index id="1010" parent="548" name="utility_sight_address_id_d1c4f469">
       <ColNames>address_id</ColNames>
     </index>
-    <key id="959" parent="541">
+    <key id="1011" parent="548">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="960" parent="541">
+    <key id="1012" parent="548">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_utility_sight_1</UnderlyingIndexName>
     </key>
-    <column id="961" parent="542" name="id">
+    <column id="1013" parent="549" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="962" parent="542" name="sight_id">
+    <column id="1014" parent="549" name="sight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="963" parent="542" name="image_id">
+    <column id="1015" parent="549" name="image_id">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="964" parent="542">
+    <foreign-key id="1016" parent="549">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <foreign-key id="965" parent="542">
+    <foreign-key id="1017" parent="549">
       <ColNames>image_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <index id="966" parent="542" name="utility_sight_images_sight_id_image_id_09fabdd1_uniq">
+    <index id="1018" parent="549" name="utility_sight_images_sight_id_image_id_09fabdd1_uniq">
       <ColNames>sight_id
 image_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="967" parent="542" name="utility_sight_images_sight_id_8e50d695">
+    <index id="1019" parent="549" name="utility_sight_images_sight_id_8e50d695">
       <ColNames>sight_id</ColNames>
     </index>
-    <index id="968" parent="542" name="utility_sight_images_image_id_782f6394">
+    <index id="1020" parent="549" name="utility_sight_images_image_id_782f6394">
       <ColNames>image_id</ColNames>
     </index>
-    <key id="969" parent="542">
+    <key id="1021" parent="549">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="970" parent="543" name="id">
+    <column id="1022" parent="550" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="971" parent="543" name="sight_id">
+    <column id="1023" parent="550" name="sight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="972" parent="543" name="tag_id">
+    <column id="1024" parent="550" name="tag_id">
       <DasType>varchar(48)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="973" parent="543">
+    <foreign-key id="1025" parent="550">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <foreign-key id="974" parent="543">
+    <foreign-key id="1026" parent="550">
       <ColNames>tag_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>name</RefColNames>
       <RefTableName>utility_tag</RefTableName>
     </foreign-key>
-    <index id="975" parent="543" name="utility_sight_tags_sight_id_tag_id_c1547ef9_uniq">
+    <index id="1027" parent="550" name="utility_sight_tags_sight_id_tag_id_c1547ef9_uniq">
       <ColNames>sight_id
 tag_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="976" parent="543" name="utility_sight_tags_sight_id_6407bd49">
+    <index id="1028" parent="550" name="utility_sight_tags_sight_id_6407bd49">
       <ColNames>sight_id</ColNames>
     </index>
-    <index id="977" parent="543" name="utility_sight_tags_tag_id_12914733">
+    <index id="1029" parent="550" name="utility_sight_tags_tag_id_12914733">
       <ColNames>tag_id</ColNames>
     </index>
-    <key id="978" parent="543">
+    <key id="1030" parent="550">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="979" parent="544" name="id">
+    <column id="1031" parent="551" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="980" parent="544" name="sight_id">
+    <column id="1032" parent="551" name="sight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="981" parent="544" name="sighttype_id">
+    <column id="1033" parent="551" name="sighttype_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="982" parent="544">
+    <foreign-key id="1034" parent="551">
       <ColNames>sight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sight</RefTableName>
     </foreign-key>
-    <foreign-key id="983" parent="544">
+    <foreign-key id="1035" parent="551">
       <ColNames>sighttype_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_sighttype</RefTableName>
     </foreign-key>
-    <index id="984" parent="544" name="utility_sight_types_sight_id_sighttype_id_29f99465_uniq">
+    <index id="1036" parent="551" name="utility_sight_types_sight_id_sighttype_id_29f99465_uniq">
       <ColNames>sight_id
 sighttype_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="985" parent="544" name="utility_sight_types_sight_id_43ab11ed">
+    <index id="1037" parent="551" name="utility_sight_types_sight_id_43ab11ed">
       <ColNames>sight_id</ColNames>
     </index>
-    <index id="986" parent="544" name="utility_sight_types_sighttype_id_fb50f4c7">
+    <index id="1038" parent="551" name="utility_sight_types_sighttype_id_fb50f4c7">
       <ColNames>sighttype_id</ColNames>
     </index>
-    <key id="987" parent="544">
+    <key id="1039" parent="551">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="988" parent="545" name="id">
+    <column id="1040" parent="552" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="989" parent="545" name="type">
+    <column id="1041" parent="552" name="type">
       <DasType>smallint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="990" parent="545">
+    <key id="1042" parent="552">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="991" parent="546" name="name">
+    <column id="1043" parent="553" name="name">
       <DasType>varchar(48)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <index id="992" parent="546" name="sqlite_autoindex_utility_tag_1">
+    <index id="1044" parent="553" name="sqlite_autoindex_utility_tag_1">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="993" parent="546">
+    <key id="1045" parent="553">
       <ColNames>name</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_utility_tag_1</UnderlyingIndexName>
     </key>
-    <column id="994" parent="547" name="id">
+    <column id="1046" parent="554" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="995" parent="547" name="time">
+    <column id="1047" parent="554" name="time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="996" parent="547" name="title">
+    <column id="1048" parent="554" name="title">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="997" parent="547" name="content">
+    <column id="1049" parent="554" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="998" parent="547" name="read_total">
+    <column id="1050" parent="554" name="read_total">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="999" parent="547" name="last_read">
+    <column id="1051" parent="554" name="last_read">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="1000" parent="547" name="visibility">
+    <column id="1052" parent="554" name="visibility">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="1001" parent="547" name="forbidden">
+    <column id="1053" parent="554" name="forbidden">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="1002" parent="547" name="forbidden_reason">
+    <column id="1054" parent="554" name="forbidden_reason">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="1003" parent="547" name="collection_id">
+    <column id="1055" parent="554" name="collection_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="1004" parent="547" name="cover_id">
+    <column id="1056" parent="554" name="cover_id">
       <DasType>varchar(32)|0s</DasType>
       <Position>11</Position>
     </column>
-    <column id="1005" parent="547" name="owner_id">
+    <column id="1057" parent="554" name="owner_id">
       <DasType>bigint|0s</DasType>
       <Position>12</Position>
     </column>
-    <column id="1006" parent="547" name="position_id">
+    <column id="1058" parent="554" name="position_id">
       <DasType>bigint|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="1007" parent="547" name="schedule_id">
+    <column id="1059" parent="554" name="schedule_id">
       <DasType>bigint|0s</DasType>
       <Position>14</Position>
     </column>
-    <foreign-key id="1008" parent="547">
+    <foreign-key id="1060" parent="554">
       <ColNames>collection_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotescollection</RefTableName>
     </foreign-key>
-    <foreign-key id="1009" parent="547">
+    <foreign-key id="1061" parent="554">
       <ColNames>cover_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <foreign-key id="1010" parent="547">
+    <foreign-key id="1062" parent="554">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <foreign-key id="1011" parent="547">
+    <foreign-key id="1063" parent="554">
       <ColNames>position_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_address</RefTableName>
     </foreign-key>
-    <foreign-key id="1012" parent="547">
+    <foreign-key id="1064" parent="554">
       <ColNames>schedule_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_schedule</RefTableName>
     </foreign-key>
-    <index id="1013" parent="547" name="sqlite_autoindex_utility_travelnotes_1">
+    <index id="1065" parent="554" name="sqlite_autoindex_utility_travelnotes_1">
       <ColNames>position_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="1014" parent="547" name="utility_travelnotes_collection_id_6a693ac1">
+    <index id="1066" parent="554" name="utility_travelnotes_collection_id_6a693ac1">
       <ColNames>collection_id</ColNames>
     </index>
-    <index id="1015" parent="547" name="utility_travelnotes_cover_id_859fa562">
+    <index id="1067" parent="554" name="utility_travelnotes_cover_id_859fa562">
       <ColNames>cover_id</ColNames>
     </index>
-    <index id="1016" parent="547" name="utility_travelnotes_owner_id_8b9445a7">
+    <index id="1068" parent="554" name="utility_travelnotes_owner_id_8b9445a7">
       <ColNames>owner_id</ColNames>
     </index>
-    <index id="1017" parent="547" name="utility_travelnotes_schedule_id_7ec498de">
+    <index id="1069" parent="554" name="utility_travelnotes_schedule_id_7ec498de">
       <ColNames>schedule_id</ColNames>
     </index>
-    <key id="1018" parent="547">
+    <key id="1070" parent="554">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="1019" parent="547">
+    <key id="1071" parent="554">
       <ColNames>position_id</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_utility_travelnotes_1</UnderlyingIndexName>
     </key>
-    <column id="1020" parent="548" name="id">
+    <column id="1072" parent="555" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1021" parent="548" name="travelnotes_id">
+    <column id="1073" parent="555" name="travelnotes_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1022" parent="548" name="image_id">
+    <column id="1074" parent="555" name="image_id">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="1023" parent="548">
+    <foreign-key id="1075" parent="555">
       <ColNames>travelnotes_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotes</RefTableName>
     </foreign-key>
-    <foreign-key id="1024" parent="548">
+    <foreign-key id="1076" parent="555">
       <ColNames>image_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_image</RefTableName>
     </foreign-key>
-    <index id="1025" parent="548" name="utility_travelnotes_images_travelnotes_id_image_id_80388082_uniq">
+    <index id="1077" parent="555" name="utility_travelnotes_images_travelnotes_id_image_id_80388082_uniq">
       <ColNames>travelnotes_id
 image_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="1026" parent="548" name="utility_travelnotes_images_travelnotes_id_b7ef0c21">
+    <index id="1078" parent="555" name="utility_travelnotes_images_travelnotes_id_b7ef0c21">
       <ColNames>travelnotes_id</ColNames>
     </index>
-    <index id="1027" parent="548" name="utility_travelnotes_images_image_id_947d97c8">
+    <index id="1079" parent="555" name="utility_travelnotes_images_image_id_947d97c8">
       <ColNames>image_id</ColNames>
     </index>
-    <key id="1028" parent="548">
+    <key id="1080" parent="555">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="1029" parent="549" name="id">
+    <column id="1081" parent="556" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1030" parent="549" name="travelnotes_id">
+    <column id="1082" parent="556" name="travelnotes_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1031" parent="549" name="appuser_id">
+    <column id="1083" parent="556" name="appuser_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="1032" parent="549">
+    <foreign-key id="1084" parent="556">
       <ColNames>travelnotes_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotes</RefTableName>
     </foreign-key>
-    <foreign-key id="1033" parent="549">
+    <foreign-key id="1085" parent="556">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="1034" parent="549" name="utility_travelnotes_likes_travelnotes_id_appuser_id_7de17175_uniq">
+    <index id="1086" parent="556" name="utility_travelnotes_likes_travelnotes_id_appuser_id_7de17175_uniq">
       <ColNames>travelnotes_id
 appuser_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="1035" parent="549" name="utility_travelnotes_likes_travelnotes_id_e5d092fe">
+    <index id="1087" parent="556" name="utility_travelnotes_likes_travelnotes_id_e5d092fe">
       <ColNames>travelnotes_id</ColNames>
     </index>
-    <index id="1036" parent="549" name="utility_travelnotes_likes_appuser_id_91def564">
+    <index id="1088" parent="556" name="utility_travelnotes_likes_appuser_id_91def564">
       <ColNames>appuser_id</ColNames>
     </index>
-    <key id="1037" parent="549">
+    <key id="1089" parent="556">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="1038" parent="550" name="id">
+    <column id="1090" parent="557" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1039" parent="550" name="travelnotes_id">
+    <column id="1091" parent="557" name="travelnotes_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1040" parent="550" name="tag_id">
+    <column id="1092" parent="557" name="tag_id">
       <DasType>varchar(48)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="1041" parent="550">
+    <foreign-key id="1093" parent="557">
       <ColNames>travelnotes_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_travelnotes</RefTableName>
     </foreign-key>
-    <foreign-key id="1042" parent="550">
+    <foreign-key id="1094" parent="557">
       <ColNames>tag_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>name</RefColNames>
       <RefTableName>utility_tag</RefTableName>
     </foreign-key>
-    <index id="1043" parent="550" name="utility_travelnotes_tag_travelnotes_id_tag_id_d9eb4e6d_uniq">
+    <index id="1095" parent="557" name="utility_travelnotes_tag_travelnotes_id_tag_id_d9eb4e6d_uniq">
       <ColNames>travelnotes_id
 tag_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="1044" parent="550" name="utility_travelnotes_tag_travelnotes_id_83606834">
+    <index id="1096" parent="557" name="utility_travelnotes_tag_travelnotes_id_83606834">
       <ColNames>travelnotes_id</ColNames>
     </index>
-    <index id="1045" parent="550" name="utility_travelnotes_tag_tag_id_1dd7e0c2">
+    <index id="1097" parent="557" name="utility_travelnotes_tag_tag_id_1dd7e0c2">
       <ColNames>tag_id</ColNames>
     </index>
-    <key id="1046" parent="550">
+    <key id="1098" parent="557">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="1047" parent="551" name="id">
+    <column id="1099" parent="558" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1048" parent="551" name="create_time">
+    <column id="1100" parent="558" name="create_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1049" parent="551" name="title">
+    <column id="1101" parent="558" name="title">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1050" parent="551" name="owner_id">
+    <column id="1102" parent="558" name="owner_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="1051" parent="551">
+    <foreign-key id="1103" parent="558">
       <ColNames>owner_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="1052" parent="551" name="utility_travelnotescollection_owner_id_00d39505">
+    <index id="1104" parent="558" name="utility_travelnotescollection_owner_id_00d39505">
       <ColNames>owner_id</ColNames>
     </index>
-    <key id="1053" parent="551">
+    <key id="1105" parent="558">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="1054" parent="552" name="id">
+    <column id="1106" parent="559" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1055" parent="552" name="if_alarm">
+    <column id="1107" parent="559" name="if_alarm">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1056" parent="552" name="flight_id">
+    <column id="1108" parent="559" name="flight_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1057" parent="552" name="user_id">
+    <column id="1109" parent="559" name="user_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="1058" parent="552">
+    <foreign-key id="1110" parent="559">
       <ColNames>flight_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_flight</RefTableName>
     </foreign-key>
-    <foreign-key id="1059" parent="552">
+    <foreign-key id="1111" parent="559">
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefColNames>id</RefColNames>
       <RefTableName>utility_appuser</RefTableName>
     </foreign-key>
-    <index id="1060" parent="552" name="utility_usersflight_flight_id_8266a39e">
+    <index id="1112" parent="559" name="utility_usersflight_flight_id_8266a39e">
       <ColNames>flight_id</ColNames>
     </index>
-    <index id="1061" parent="552" name="utility_usersflight_user_id_fa1043de">
+    <index id="1113" parent="559" name="utility_usersflight_user_id_fa1043de">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="1062" parent="552">
+    <key id="1114" parent="559">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

@@ -20,7 +20,7 @@ def set_openai_proxy():
     from dotenv import load_dotenv
     import openai
     load_dotenv("../../.env")
-    openai.proxies = {
+    openai.proxy = {
         'http': os.environ.get('PROXY_HTTP'),
         'https': os.environ.get('PROXY_HTTPS')
     }
