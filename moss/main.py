@@ -13,7 +13,7 @@ from master.travel_master import TravelMaster
 from utils.proxy import *
 
 set_duckduckgo_proxy()
-set_openai_proxy()
+# set_openai_proxy()
 
 travel_master = TravelMaster()
 

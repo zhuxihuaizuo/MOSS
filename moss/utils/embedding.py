@@ -4,7 +4,6 @@
 # @File    : embedding.py
 # @Software: PyCharm 
 # @Comment :
-import torch
 from langchain.embeddings import HuggingFaceEmbeddings, OpenAIEmbeddings
 from langchain.embeddings.base import Embeddings
 

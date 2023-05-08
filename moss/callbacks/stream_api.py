@@ -86,8 +86,21 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
     async def on_llm_end(self, response: LLMResult, **kwargs: Any) -> None:
         self.done.set()
         try:
-            response = json.loads(response.generations[0][0].text)
-            if response.get('action') == 'Final Answer':
+            cleaned_output = response.generations[0][0].text.strip()
+            if "```json" in cleaned_output:
+                _, cleaned_output = cleaned_output.split("```json")
+            if "```" in cleaned_output:
+                cleaned_output, _ = cleaned_output.split("```")
+            if cleaned_output.startswith("```json"):
+                cleaned_output = cleaned_output[len("```json"):]
+            if cleaned_output.startswith("```"):
+                cleaned_output = cleaned_output[len("```"):]
+            if cleaned_output.endswith("```"):
+                cleaned_output = cleaned_output[: -len("```")]
+            cleaned_output = cleaned_output.strip()
+            response = json.loads(cleaned_output)
+            action = response["action"]
+            if action == 'Final Answer':
                 self.agent_done.set()
         except Exception as e:
             print(e)
