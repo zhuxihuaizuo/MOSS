@@ -11,8 +11,8 @@ from moss.utils.baidu_map_api import circle_place_search, regional_search_res2st
 class LocationSightListSearchTool(BaseTool):
     name = "Location Sight Search"
     description = (
-        "可以获得以用户为中心1500米以内的景点信息. "
-        "输入是用户对于景点的要求."
+        "可以获得以用户为中心1500米以内的地点信息. "
+        "输入是用户对于地点的要求."
     )
     user_location = '39.9096519665138,116.4041774131041'
 

@@ -27,12 +27,14 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
 
     json_str = ''
 
-    pattern = re.compile(r'\{\s*?"action":\s*"(.+?)",\s*"action_input":\s*"')
+    pattern = re.compile(r'\s*\{\s*?"action":\s*"(.+?)",\s*"action_input":\s*"')
 
     state = 0
 
     action = ''
     action_input = ''
+
+    pre_token = ''
 
     @property
     def always_verbose(self) -> bool:
@@ -55,10 +57,17 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
         self.action_input = ''
 
     async def on_llm_new_token(self, token: str, **kwargs: Any) -> None:
-        # self.queue.put_nowait(token)
+        if token.endswith('\\'):
+            self.pre_token = token
+            return
+        if self.pre_token != '':
+            token = self.pre_token + token
+            self.pre_token = ''
         if self.state == 0:
             # 等待action的类型
             self.json_str += token
+            if "```json" in self.json_str:
+                _, self.json_str = self.json_str.split("```json")
             search = self.pattern.search(self.json_str)
             if search:
                 self.action = search.group(1)
@@ -80,7 +89,7 @@ class AsyncIteratorForApiCallbackHandler(AsyncCallbackHandler):
                 self.action_input += token
         elif self.state == 3:
             if self.action != 'Final Answer':
-                self.queue.put_nowait('{ "action": "' + self.action + '", "action": "' + self.action_input + '"}')
+                self.queue.put_nowait('{"action": "' + self.action + '", "action_input": "' + self.action_input + '"}')
             self.state = -1
 
     async def on_llm_end(self, response: LLMResult, **kwargs: Any) -> None:

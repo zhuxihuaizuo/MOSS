@@ -12,8 +12,8 @@ from moss.utils.baidu_map_api import district_place_search, regional_search_res2
 class SightListSearchTool(BaseTool):
     name = "Sight Search"
     description = (
-        "当你想要获取景点列表时使用这个工具，也可以用于获取景点地址. "
-        "输入是用户对于景点的要求，一些像[附近]的关键词不能省略."
+        "当你想要获取景点列表时使用这个工具，也可以用于获取地点地址. "
+        "输入是用户对于地点的要求，一些像[附近]的关键词不能省略."
     )
     region = '全国'
 
