@@ -62,14 +62,12 @@ async def chat(request: Request, response: Response):
             return response
 
     async def generate():
-        yield '['
         data = {'chat_id': chat_id}
         yield json.dumps(data)
         master_task = asyncio.create_task(master.arun(query, current_time, position))
         async for token in master.callback_manager.aiter():
             yield token
         await master_task
-        yield ']'
 
     return StreamingResponse(generate(), status_code=200, media_type='text/plain')
 

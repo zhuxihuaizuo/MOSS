@@ -23,7 +23,4 @@ tiktoken
 colorama
 
 # setings
-python-dotenv
-
-# api
-pca
+python-dot
