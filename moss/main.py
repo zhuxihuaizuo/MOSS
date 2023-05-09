@@ -33,7 +33,9 @@ async def call(query):
 
 
 async def main():
-    await asyncio.gather(travel_master.arun("我附近有什么可以吃饭的地方"), output())
+    query = "我想在北京游玩，请为我生成一份旅行计划"
+    print(query)
+    await asyncio.gather(travel_master.arun(query), output())
 
 
 if __name__ == "__main__":

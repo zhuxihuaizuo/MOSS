@@ -8,9 +8,8 @@ import asyncio
 import json
 
 from dotenv import load_dotenv
-from starlette.middleware.cors import CORSMiddleware
-
 load_dotenv('../.env')
+from starlette.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Response, Request
 from fastapi.responses import StreamingResponse
 from master.travel_master import TravelMaster
@@ -62,8 +61,7 @@ async def chat(request: Request, response: Response):
             return response
 
     async def generate():
-        data = {'chat_id': chat_id}
-        yield json.dumps(data)
+        yield json.dumps({'action': 'chat_id', 'action_input': chat_id})
         master_task = asyncio.create_task(master.arun(query, current_time, position))
         async for token in master.callback_manager.aiter():
             yield token

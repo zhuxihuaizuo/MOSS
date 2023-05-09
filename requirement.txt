@@ -12,7 +12,7 @@ numpy
 # ai
 openai
 langchain
-torch
+# torch
 transformers
 sentence-transformers
 faiss-cpu
@@ -23,4 +23,4 @@ tiktoken
 colorama
 
 # setings
-python-dot
+python-dotenv
