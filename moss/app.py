@@ -8,12 +8,15 @@ import asyncio
 import json
 
 from dotenv import load_dotenv
+from langchain.schema import HumanMessage
+
 load_dotenv('../.env')
 from starlette.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Response, Request
 from fastapi.responses import StreamingResponse
 from master.travel_master import TravelMaster
 from utils.proxy import *
+from langchain.chat_models.openai import ChatOpenAI
 
 set_duckduckgo_proxy()
 
@@ -34,6 +37,21 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+def generate_questions(query: str) -> dict:
+    gpt = ChatOpenAI(temperature=0.8, max_tokens=1000)
+    message = "用户问题：" + query + "\n" + """
+根据以上用户问题，再从用户角度提出三个有关问题
+输出格式如下：
+
+{
+    "question1": string, \\ 第一个问题
+    "question2": string, \\ 第二个问题
+    "question3": string, \\ 第三个问题
+}"""
+    res = gpt([HumanMessage(content=message)])
+    return json.loads(res.content)
 
 
 @app.post("/chat")
@@ -62,10 +80,14 @@ async def chat(request: Request, response: Response):
 
     async def generate():
         yield json.dumps({'action': 'chat_id', 'action_input': chat_id})
-        master_task = asyncio.create_task(master.arun(query, current_time, position))
+        master_task = asyncio.create_task(master.arun(query, address=position))
         async for token in master.callback_manager.aiter():
             yield token
         await master_task
+        new_question = generate_questions(query)
+        yield json.dumps({'action': 'new_question', 'action_input': new_question.get('question1')})
+        yield json.dumps({'action': 'new_question', 'action_input': new_question.get('question2')})
+        yield json.dumps({'action': 'new_question', 'action_input': new_question.get('question3')})
 
     return StreamingResponse(generate(), status_code=200, media_type='text/plain')
 
@@ -94,4 +116,5 @@ async def del_chat(request: Request, response: Response):
 
 if __name__ == '__main__':
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

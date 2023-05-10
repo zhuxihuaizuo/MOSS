@@ -21,22 +21,24 @@ from moss.utils.baidu_map_api import address2location
 
 class TravelMaster:
     def __init__(self):
-        duckduckgo = WebSearchTool()
-        self.place_search = SightListSearchTool()
-        self.nearby_place_search = LocationSightListSearchTool()
-        weather_search = WeatherSearchTool()
-        tools = [duckduckgo, self.place_search, self.nearby_place_search, weather_search]
+        # duckduckgo = WebSearchTool()
+        self.place_search = PlaceListSearchTool()
+        self.nearby_place_search = LocationPlaceListSearchTool()
+        weather_search_tool = WeatherSearchTool()
+        travel_planer = TravelPlanTool()
+        tools = [self.place_search, self.nearby_place_search, weather_search_tool, travel_planer]
 
         self.callback_manager = AsyncIteratorForApiCallbackHandler()
         llm = ChatOpenAI(streaming=True,
                          callback_manager=AsyncCallbackManager([self.callback_manager]),
                          verbose=True,
-                         temperature=0.8)
-        self.system_message = """你是一个旅行助手，尽可能的用中文回答用户有关旅行的问题。"""
+                         temperature=0.8,
+                         max_tokens=1500)
+        self.system_message = """你是一个旅行助手，尽可能的用中文回答用户有关旅行的问题。用户问题与旅行无关时，委婉回绝。"""
         agent_kwargs = {
             'system_message': self.system_message,
         }
-        memory = ConversationTokenBufferMemory(llm=ChatOpenAI(), max_token_limit=1000,
+        memory = ConversationTokenBufferMemory(llm=ChatOpenAI(),
                                                memory_key="chat_history", return_messages=True)
         self.master = initialize_agent(tools, llm,
                                        agent=AgentType.CHAT_CONVERSATIONAL_REACT_DESCRIPTION,

@@ -22,9 +22,9 @@ travel_master = TravelMaster()
 
 async def output():
     async for s in travel_master.callback_manager.aiter():
-        # print(s)
-        s = json.loads(s).get('action_input')
-        print(s, end='')
+        s = json.loads(s)
+        if s.get('action') == 'Final Answer':
+            print(s.get('action_input'), end='')
         pass
 
 
@@ -33,11 +33,10 @@ async def call(query):
 
 
 async def main():
-    query = "我想在北京游玩，请为我生成一份旅行计划"
-    print(query)
+    query = "规划在北京的游玩计划"
+    print(query, end='')
     await asyncio.gather(travel_master.arun(query), output())
 
 
 if __name__ == "__main__":
-    # travel_master.set_time_and_address()
     asyncio.run(main())

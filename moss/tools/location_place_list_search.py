@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/5/5 上午9:11
 # @Author  : Su Yang
-# @File    : location_sight_list_search.py
+# @File    : location_place_list_search.py
 # @Software: PyCharm 
 # @Comment :
 from langchain.tools.base import BaseTool
 from moss.utils.baidu_map_api import circle_place_search, regional_search_res2str
 
 
-class LocationSightListSearchTool(BaseTool):
+class LocationPlaceListSearchTool(BaseTool):
     name = "Location Sight Search"
     description = (
-        "可以获得以用户为中心1500米以内的地点信息. "
+        "可以获得以用户为中心1500米以内的地点信息。"
         "输入是用户对于地点的要求."
     )
     user_location = '39.9096519665138,116.4041774131041'
