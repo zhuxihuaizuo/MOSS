@@ -92,8 +92,8 @@ async def chat(request: Request, response: Response):
     return StreamingResponse(generate(), status_code=200, media_type='text/plain')
 
 
-@app.post('/del_chat')
-async def del_chat(request: Request, response: Response):
+@app.delete('/chat')
+async def chat(request: Request, response: Response):
     json_data = await request.json()
     chat_id = json_data.get("chat_id")
     if chat_id is None:

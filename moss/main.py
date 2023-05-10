@@ -33,7 +33,7 @@ async def call(query):
 
 
 async def main():
-    query = "规划在北京的游玩计划"
+    query = "规划在上海的详细3天游玩计划"
     print(query, end='')
     await asyncio.gather(travel_master.arun(query), output())
 
