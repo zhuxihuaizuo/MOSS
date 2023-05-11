@@ -85,9 +85,9 @@ async def chat(request: Request, response: Response):
             yield token
         await master_task
         new_question = generate_questions(query)
-        yield json.dumps({'action': 'new_question', 'action_input': new_question.get('question1')})
-        yield json.dumps({'action': 'new_question', 'action_input': new_question.get('question2')})
-        yield json.dumps({'action': 'new_question', 'action_input': new_question.get('question3')})
+        yield json.dumps({'action': 'New Question', 'action_input': new_question.get('question1')})
+        yield json.dumps({'action': 'New Question', 'action_input': new_question.get('question2')})
+        yield json.dumps({'action': 'New Question', 'action_input': new_question.get('question3')})
 
     return StreamingResponse(generate(), status_code=200, media_type='text/plain')
 
