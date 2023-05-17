@@ -11,13 +11,12 @@ numpy
 
 # ai
 openai
-langchain
-# torch
+langchain==0.0.170
+torch==2.0.0
 transformers
 sentence-transformers
 faiss-cpu
 tiktoken
-
 
 # output
 colorama

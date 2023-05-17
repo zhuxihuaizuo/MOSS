@@ -12,23 +12,24 @@ from langchain.agents import initialize_agent
 from langchain.callbacks.manager import AsyncCallbackManager
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationTokenBufferMemory
-from moss.callbacks.stream_api import AsyncIteratorForApiCallbackHandler
+from moss.callbacks.async_iterator_for_TravelGPT_callback_handler import AsyncIteratorForTravelGPTCallbackHandler
 from moss.tools import *
 from langchain.agents import ConversationalChatAgent
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, PromptTemplate
-from moss.utils.baidu_map_api import address2location
+from moss.utils.baidu_map_api import BaiduMapApi
 
 
 class TravelMaster:
     def __init__(self):
         # duckduckgo = WebSearchTool()
-        self.place_search = PlaceListSearchTool()
-        self.nearby_place_search = LocationPlaceListSearchTool()
+        self.baidu_map_api = BaiduMapApi()
+        self.place_search = DistrictPlaceSearchTool()
+        self.nearby_place_search = CirclePlaceSearchTool()
         weather_search_tool = WeatherSearchTool()
         travel_planer = TravelPlanTool()
         tools = [self.place_search, self.nearby_place_search, weather_search_tool, travel_planer]
 
-        self.callback_manager = AsyncIteratorForApiCallbackHandler()
+        self.callback_manager = AsyncIteratorForTravelGPTCallbackHandler()
         llm = ChatOpenAI(streaming=True,
                          callback_manager=AsyncCallbackManager([self.callback_manager]),
                          verbose=True,
@@ -82,5 +83,5 @@ class TravelMaster:
                                address: str = '北京',
                                location: str = '39.9096519665138,116.4041774131041'):
         if location == '':
-            location = address2location(address)
+            location = self.baidu_map_api.address2location(address)
         self.nearby_place_search.user_location = location

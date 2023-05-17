@@ -6,7 +6,7 @@
 # @Comment :
 from langchain.tools.base import BaseTool
 
-from moss.utils.baidu_map_api import address2adcode, weather_search
+from moss.utils.baidu_map_api import BaiduMapApi
 
 
 class WeatherSearchTool(BaseTool):
@@ -18,10 +18,11 @@ class WeatherSearchTool(BaseTool):
 
     def _run(self, query: str) -> str:
         """Use the tool."""
-        adcode = address2adcode(query)
+        baidu_map_api = BaiduMapApi()
+        adcode = baidu_map_api.address2adcode(query)
         if adcode != '':
-            return weather_search(adcode)
-        return ''
+            return baidu_map_api.weather_search(adcode)
+        return '抱歉，无法找到相关天气信息。'
 
     async def _arun(self, query: str) -> str:
         """Use the tool asynchronously."""

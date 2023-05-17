@@ -14,8 +14,7 @@ class WebSearchTool(DuckDuckGoSearchRun):
     name = "Web Search"
     description = (
         "当你需要回答关于最近发生的事件的问题时可以使用这工具. "
-        "当需要对景点进行介绍时也可以使用这个工具. "
-        "输入是要搜索的内容."
+        "输入是要搜索的关键词。"
     )
 
     def __init__(self):
