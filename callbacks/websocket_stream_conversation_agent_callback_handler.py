@@ -1,52 +1,53 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/4/30 下午2:58
-# @Author  : Su Yang
-# @File    : async_iterator_for_TravelGPT_callback_handler.py
+# @Time    : 2023/5/20 17:59
+# @Author  : 
+# @File    : websocket_stream_conversation_agent_callback_handler.py
 # @Software: PyCharm 
 # @Comment :
 from __future__ import annotations
 
-import asyncio
 import json
 import re
-from typing import Any, AsyncIterator, Dict, List, Literal, Union, cast, Optional
+from typing import Any, Dict, List, Union, Optional
 from uuid import UUID
 
+from fastapi import WebSocket
 from langchain.callbacks.base import AsyncCallbackHandler
 from langchain.schema import LLMResult, BaseMessage
 
 
-class AsyncIteratorForTravelGPTCallbackHandler(AsyncCallbackHandler):
+class WebsocketStreamConversationAgentCallbackHandler(AsyncCallbackHandler):
     """Callback handler that returns an async iterator."""
 
-    queue: asyncio.Queue[str]
-
-    done: asyncio.Event
-
     json_str = ''
-
     pattern = re.compile(r'\s*\{\s*?"action":\s*"(.+?)",\s*"action_input":\s*"')
-
     state = 0
-
     action = ''
     action_input = ''
-
     pre_token = ''
+    websocket: Optional[WebSocket] = None
 
     @property
     def always_verbose(self) -> bool:
         return True
 
-    def __init__(self) -> None:
-        self.queue = asyncio.Queue()
-        self.done = asyncio.Event()
-        self.agent_done = asyncio.Event()
+    def check_websocket(self):
+        """
+        检查websocket是否设置
+        """
+        if self.websocket is None:
+            raise RuntimeError('websocket未指定')
+
+    def set_websocket(self, websocket: WebSocket):
+        """
+        设置websocket
+        Args:
+            websocket: websocket对象
+        """
+        self.websocket = websocket
 
     async def on_chat_model_start(self, serialized: Dict[str, Any], messages: List[List[BaseMessage]], *, run_id: UUID,
                                   parent_run_id: Optional[UUID] = None, **kwargs: Any) -> Any:
-        self.done.clear()
-        self.agent_done.clear()
         self.state = 0
         self.json_str = ''
         self.action = ''
@@ -56,8 +57,7 @@ class AsyncIteratorForTravelGPTCallbackHandler(AsyncCallbackHandler):
             self, serialized: Dict[str, Any], prompts: List[str], **kwargs: Any
     ) -> None:
         # If two calls are made in a row, this resets the state
-        self.done.clear()
-        self.agent_done.clear()
+        self.check_websocket()
         self.state = 0
         self.json_str = ''
         self.action = ''
@@ -85,9 +85,18 @@ class AsyncIteratorForTravelGPTCallbackHandler(AsyncCallbackHandler):
         elif self.state == 1:
             # Final Answer
             if '"' in token:
-                self.state = 3
+                self.state = -1
             else:
-                self.queue.put_nowait('{"action": "Final Answer", "action_input": "' + token + '"}')
+                data = {
+                    'action': 'Final Answer',
+                    'action_input': token
+                }
+                if self.websocket is not None:
+                    await self.websocket.send_json(data)
+                else:
+                    print(token, end='')
+            if self.state == -1:
+                print()
         elif self.state == 2:
             # other action input
             if '"' in token:
@@ -95,12 +104,19 @@ class AsyncIteratorForTravelGPTCallbackHandler(AsyncCallbackHandler):
             else:
                 self.action_input += token
         elif self.state == 3:
+            # sent other action message
             if self.action != 'Final Answer':
-                self.queue.put_nowait('{"action": "' + self.action + '", "action_input": "' + self.action_input + '"}')
-            self.state = -1
+                data = {
+                    'action': self.action,
+                    'action_input': self.action_input
+                }
+                if self.websocket is not None:
+                    await self.websocket.send_json(data)
+                else:
+                    print(data)
+            self.state = -1  # 结束一轮返回
 
     async def on_llm_end(self, response: LLMResult, **kwargs: Any) -> None:
-        self.done.set()
         try:
             cleaned_output = response.generations[0][0].text.strip()
             if "```json" in cleaned_output:
@@ -117,41 +133,11 @@ class AsyncIteratorForTravelGPTCallbackHandler(AsyncCallbackHandler):
             response = json.loads(cleaned_output)
             action = response["action"]
             if action == 'Final Answer':
-                self.agent_done.set()
+                self.websocket = None
         except Exception as e:
             print(e)
 
     async def on_llm_error(
             self, error: Union[Exception, KeyboardInterrupt], **kwargs: Any
     ) -> None:
-        self.done.set()
-        self.agent_done.set()
-
-    # TODO implement the other methods
-
-    async def aiter(self) -> AsyncIterator[str]:
-        while not self.queue.empty() or not self.agent_done.is_set():
-            # Wait for the next token in the queue,
-            # but stop waiting if the done event is set
-            done, other = await asyncio.wait(
-                [
-                    # NOTE: If you add other tasks here, update the code below,
-                    # which assumes each set has exactly one task each
-                    asyncio.ensure_future(self.queue.get()),
-                    asyncio.ensure_future(self.agent_done.wait()),
-                ],
-                return_when=asyncio.FIRST_COMPLETED,
-            )
-
-            # Cancel the other task
-            other.pop().cancel()
-
-            # Extract the value of the first completed task
-            token_or_done = cast(Union[str, Literal[True]], done.pop().result())
-
-            # If the extracted value is the boolean True, the done event was set
-            if token_or_done is True:
-                break
-
-            # Otherwise, the extracted value is a token, which we yield
-            yield token_or_done
+        pass

@@ -8,22 +8,18 @@ import asyncio
 import json
 
 from dotenv import load_dotenv
-from langchain.schema import HumanMessage
 
 load_dotenv('.env')
 from starlette.middleware.cors import CORSMiddleware
-from fastapi import FastAPI, Response, Request
-from fastapi.responses import StreamingResponse
-from moss.master.travel_master import TravelMaster
-from moss.utils.proxy import *
-from langchain.chat_models.openai import ChatOpenAI
-
-set_duckduckgo_proxy()
+from fastapi import FastAPI, Response, Request, WebSocket
+from agents.travel_agent import TravelAgent
 
 app = FastAPI()
 
-masters = {}
+# 存储agent对象
+agents = {}
 
+# 跨域
 origins = [
     "http://localhost",
     "http://localhost:8000",
@@ -39,57 +35,34 @@ app.add_middleware(
 )
 
 
-def generate_questions(query: str) -> dict:
-    gpt = ChatOpenAI(temperature=0.8, max_tokens=1000)
-    message = "用户问题：" + query + "\n" + """
-根据以上用户问题，再从用户角度提出三个有关问题
-输出格式如下：
-
-{
-    "question1": string, \\ 第一个问题
-    "question2": string, \\ 第二个问题
-    "question3": string, \\ 第三个问题
-}"""
-    res = gpt([HumanMessage(content=message)])
-    return json.loads(res.content)
-
-
-@app.post("/chat")
-async def chat(request: Request, response: Response):
-    json_data = await request.json()
+@app.websocket("/chat")
+async def chat(websocket: WebSocket):
+    await websocket.accept()
+    json_data = await websocket.receive_json()
     chat_id = json_data.get("chat_id")
     query = json_data.get("query")
-    current_time = json_data.get("current_time")
+    # current_time = json_data.get("current_time")
     position = json_data.get("position")
     if chat_id is None:
         data = {'error': "chat id cannot be empty"}
-        response.content = json.dumps(data)
-        response.status_code = 404
-        return response
+        await websocket.send_json(data=data)
+        return
     if chat_id == '':
-        master = TravelMaster()
+        # TODO 支持更多agent
+        master = TravelAgent()
         chat_id = master.id
-        masters[chat_id] = master
+        agents[chat_id] = master
     else:
-        master = masters.get(chat_id, None)
+        master = agents.get(chat_id, None)
         if master is None:
             data = {'error': "invalid chat id"}
-            response.content = json.dumps(data)
-            response.status_code = 404
-            return response
+            await websocket.send_json(data=data)
+            return
 
-    async def generate():
-        yield json.dumps({'action': 'chat_id', 'action_input': chat_id})
-        master_task = asyncio.create_task(master.arun(query, address=position))
-        async for token in master.callback_manager.aiter():
-            yield token
-        await master_task
-        new_question = generate_questions(query)
-        yield json.dumps({'action': 'New Question', 'action_input': new_question.get('question1')})
-        yield json.dumps({'action': 'New Question', 'action_input': new_question.get('question2')})
-        yield json.dumps({'action': 'New Question', 'action_input': new_question.get('question3')})
-
-    return StreamingResponse(generate(), status_code=200, media_type='text/plain')
+    await websocket.send_json({'action': 'chat_id', 'action_input': chat_id})
+    master.callback_manager.set_websocket(websocket)
+    master_task = asyncio.create_task(master.arun(query, address=position))
+    await master_task
 
 
 @app.delete('/chat')
@@ -102,7 +75,7 @@ async def chat(request: Request, response: Response):
         response.status_code = 404
         return response
     try:
-        masters.pop(chat_id)
+        agents.pop(chat_id)
         data = {'chat_id': chat_id}
         response.content = json.dumps(data)
         response.status_code = 200
@@ -116,5 +89,4 @@ async def chat(request: Request, response: Response):
 
 if __name__ == '__main__':
     import uvicorn
-
     uvicorn.run(app, host="0.0.0.0", port=8000)

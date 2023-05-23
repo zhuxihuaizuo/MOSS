@@ -6,7 +6,7 @@
 # @Comment :
 from langchain.tools.base import BaseTool
 
-from moss.utils.baidu_map_api import BaiduMapApi
+from utils.baidu_map_api import BaiduMapApi
 
 
 class WeatherSearchTool(BaseTool):

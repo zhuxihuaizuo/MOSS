@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/4/25 下午3:05
 # @Author  : Su Yang
-# @File    : travel_master.py
+# @File    : travel_agent.py
 # @Software: PyCharm 
 # @Comment :
 import time
@@ -12,41 +12,52 @@ from langchain.agents import initialize_agent
 from langchain.callbacks.manager import AsyncCallbackManager
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationTokenBufferMemory
-from moss.callbacks.async_iterator_for_TravelGPT_callback_handler import AsyncIteratorForTravelGPTCallbackHandler
-from moss.tools import *
+from callbacks.websocket_stream_conversation_agent_callback_handler import \
+    WebsocketStreamConversationAgentCallbackHandler
+from tools import *
 from langchain.agents import ConversationalChatAgent
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, PromptTemplate
-from moss.utils.baidu_map_api import BaiduMapApi
+from utils.baidu_map_api import BaiduMapApi
 
 
-class TravelMaster:
+class TravelAgent:
     def __init__(self):
-        # duckduckgo = WebSearchTool()
         self.baidu_map_api = BaiduMapApi()
-        self.place_search = DistrictPlaceSearchTool()
-        self.nearby_place_search = CirclePlaceSearchTool()
+        self.district_place_search = DistrictPlaceSearchTool()
+        self.circle_place_search = CirclePlaceSearchTool()
         weather_search_tool = WeatherSearchTool()
         travel_planer = TravelPlanTool()
-        tools = [self.place_search, self.nearby_place_search, weather_search_tool, travel_planer]
+        tools = [
+            self.district_place_search,
+            self.circle_place_search,
+            weather_search_tool,
+            travel_planer
+        ]
 
-        self.callback_manager = AsyncIteratorForTravelGPTCallbackHandler()
+        # 定义输出处理
+        self.callback_manager = WebsocketStreamConversationAgentCallbackHandler()
         llm = ChatOpenAI(streaming=True,
                          callback_manager=AsyncCallbackManager([self.callback_manager]),
                          verbose=True,
                          temperature=0.8,
                          max_tokens=1500)
-        self.system_message = """你是一个旅行助手，尽可能的用中文回答用户有关旅行的问题。用户问题与旅行无关时，委婉回绝。"""
+        # 定义系统信息
+        self.system_message = """你是一个旅行助手，用中文回答用户有关旅行的问题。用户问题与旅行无关时，委婉回绝。"""
         agent_kwargs = {
             'system_message': self.system_message,
         }
-        memory = ConversationTokenBufferMemory(llm=ChatOpenAI(),
-                                               memory_key="chat_history", return_messages=True)
+        # 定义记忆模块
+        memory = ConversationTokenBufferMemory(llm=llm,
+                                               memory_key="chat_history",
+                                               return_messages=True)
+        # 定义代理
         self.master = initialize_agent(tools, llm,
                                        agent=AgentType.CHAT_CONVERSATIONAL_REACT_DESCRIPTION,
                                        verbose=True,
                                        memory=memory,
-                                       max_iterations=5,
+                                       max_iterations=2,
                                        agent_kwargs=agent_kwargs)
+        # agent的唯一标识
         self.id = str(uuid.uuid4())
 
     async def arun(self, query: str,
@@ -84,4 +95,4 @@ class TravelMaster:
                                location: str = '39.9096519665138,116.4041774131041'):
         if location == '':
             location = self.baidu_map_api.address2location(address)
-        self.nearby_place_search.user_location = location
+        self.circle_place_search.user_location = location
